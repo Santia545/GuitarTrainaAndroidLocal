@@ -40,11 +40,9 @@ public class DashboardFragment extends Fragment {
 
     private FragmentDashboardBinding binding;
     private NavigationView dashnavView;
-    private SharedPreferences archivo;
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        archivo = getEncryptedSharedPreferences(requireContext());
         binding = FragmentDashboardBinding.inflate(inflater, container, false);
         return binding.getRoot();
     }
@@ -65,12 +63,8 @@ public class DashboardFragment extends Fragment {
                 Intent metronome = new Intent(requireContext(), MetronomeActivity.class);
                 startActivity(metronome);
             } else if (itemId == R.id.navigation_entrenador_de_oido) {
-                if (checkLogIn()) {
-                    Intent earTrainer = new Intent(requireContext(), EarTrainerActivity.class);
-                    startActivity(earTrainer);
-                } else {
-                    DialogInfo.dialogInfoBuilder(requireContext(), "", getString(R.string.guest_user_prohibited)).show();
-                }
+                Intent earTrainer = new Intent(requireContext(), EarTrainerActivity.class);
+                startActivity(earTrainer);
             } else if (itemId == R.id.navigation_rythm_looper) {
                 if (!checkInternetConnection()) {
                     DialogInfo.dialogInfoBuilder(requireContext(), "", getString(R.string.no_internet_info)).show();
@@ -82,12 +76,8 @@ public class DashboardFragment extends Fragment {
                 Intent chordLibrary = new Intent(requireContext(), ChordLibraryActivity.class);
                 startActivity(chordLibrary);
             } else if (itemId == R.id.navigation_progreso) {
-                if (checkLogIn()) {
-                    Intent progress = new Intent(requireContext(), ProgressActivity.class);
-                    startActivity(progress);
-                } else {
-                    DialogInfo.dialogInfoBuilder(requireContext(), "", getString(R.string.guest_user_prohibited)).show();
-                }
+                Intent progress = new Intent(requireContext(), ProgressActivity.class);
+                startActivity(progress);
             } else if (itemId == R.id.notifications) {
                 Intent notifs = new Intent(requireContext(), NotificationsActivity.class);
                 startActivity(notifs);
@@ -104,16 +94,6 @@ public class DashboardFragment extends Fragment {
         }
         return false;
     }
-
-    private boolean checkLogIn() {
-        if (archivo.contains("idUsuario")) {
-            return !archivo.getString("idUsuario", "notlogged").equals("0");
-        }
-        return false;
-    }
-
-
-
 
 
     @Override

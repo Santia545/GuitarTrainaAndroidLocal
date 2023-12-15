@@ -41,23 +41,19 @@ public class TuningsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tunings);
         recyclerView = findViewById(R.id.recyclerView);
-        archivo=getEncryptedSharedPreferences(this);
+        archivo = getEncryptedSharedPreferences(this);
         initVolleyCallback();
         volleyService = new VolleyService(resultCallback, this);
         Button createTuning = findViewById(R.id.tuning_create_btn);
-        if (checkLogIn()) {
-            createTuning.setOnClickListener(view -> {
-                Intent toTuningCreation = new Intent(TuningsActivity.this, TuningCreationActivity.class);
-                startActivity(toTuningCreation);
-            });
-        } else {
-            createTuning.setOnClickListener(view -> Toast.makeText(this, getString(R.string.guest_user_prohibited), Toast.LENGTH_SHORT).show());
-        }
-
+        createTuning.setOnClickListener(view -> {
+            Intent toTuningCreation = new Intent(TuningsActivity.this, TuningCreationActivity.class);
+            startActivity(toTuningCreation);
+        });
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(linearLayoutManager);
         recyclerView.setHasFixedSize(false);
     }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.toolbar_menu, menu);
@@ -83,12 +79,6 @@ public class TuningsActivity extends AppCompatActivity {
         getTuningData();
     }
 
-    public boolean checkLogIn(){
-        if (archivo.contains("idUsuario")) {
-            return !archivo.getString("idUsuario", "notlogged").equals("0");
-        }
-        return false;
-    }
     private void initializeAdapter() {
         TuningsRVAdapter tuningsRVAdapter = new TuningsRVAdapter(tunings, true);
         tuningsRVAdapter.setOnChangeTuningClickListener(view -> {
@@ -104,19 +94,19 @@ public class TuningsActivity extends AppCompatActivity {
         tuningsRVAdapter.setOnDeleteTuningClickListener(view -> {
             int position = tuningsRVAdapter.getItem();
             if (tunings.get(position).getId() < 0) {
-                DialogInfo.dialogInfoBuilder(this,"", getString(R.string.delete_tuning_error)).show();
+                DialogInfo.dialogInfoBuilder(this, "", getString(R.string.delete_tuning_error)).show();
                 return;
             }
-            String url = "/Tunings?tuningId=" +tunings.get(position).getId();
+            String url = "/Tunings?tuningId=" + tunings.get(position).getId();
             volleyService.deleteStringDataVolley(url);
-            String jsonArrayLocalTunings = archivo.getString("custom_tunings",null);
-            if(jsonArrayLocalTunings!=null){
+            String jsonArrayLocalTunings = archivo.getString("custom_tunings", null);
+            if (jsonArrayLocalTunings != null) {
                 Type type = new TypeToken<List<Tuning>>() {
                 }.getType();
-                List<Tuning> aux= new Gson().fromJson(jsonArrayLocalTunings, type);
-                for (int i=0; i<aux.size();i++) {
+                List<Tuning> aux = new Gson().fromJson(jsonArrayLocalTunings, type);
+                for (int i = 0; i < aux.size(); i++) {
                     Tuning t = aux.get(i);
-                    if(t.getId().equals(tunings.get(position).getId())){
+                    if (t.getId().equals(tunings.get(position).getId())) {
                         aux.remove(t);
                         break;
                     }
@@ -134,12 +124,9 @@ public class TuningsActivity extends AppCompatActivity {
         Type type = new TypeToken<List<Tuning>>() {
         }.getType();
         tunings = new Gson().fromJson(jsonTunings, type);
-        if(checkLogIn()){
-            String url = "/Tunings?email=" + getCurrentUser();
-            volleyService.getStringDataVolley(url);
-        }else{
-            initializeAdapter();
-        }
+        String url = "/Tunings?email=" + getCurrentUser();
+        volleyService.getStringDataVolley(url);
+
     }
 
     private String getCurrentUser() {
@@ -165,10 +152,10 @@ public class TuningsActivity extends AppCompatActivity {
             public void notifyError(String requestType, VolleyError error) {
                 error.printStackTrace();
                 String body = "";
-                String errorCode="";
+                String errorCode = "";
                 if (error.networkResponse != null) {
                     body = new String(error.networkResponse.data, StandardCharsets.UTF_8);
-                    errorCode =""+ error.networkResponse.statusCode;
+                    errorCode = "" + error.networkResponse.statusCode;
                 }
                 Log.d("notifyError", "Volley requester " + requestType);
                 Log.d("notifyError", "Volley JSON post" + "That didn't work!" + error + " " + errorCode);
@@ -177,10 +164,10 @@ public class TuningsActivity extends AppCompatActivity {
                         + "\nResponse Data " + body
                         + "\nCause " + error.getCause()
                         + "\nmessage " + error.getMessage());
-                if(requestType.equals("GET")) {
-                    Toast.makeText(TuningsActivity.this, R.string.working_with_local_tuning_file,Toast.LENGTH_SHORT).show();
-                    String jsonArrayLocalTunings = archivo.getString("custom_tunings",null);
-                    if(jsonArrayLocalTunings!=null){
+                if (requestType.equals("GET")) {
+                    Toast.makeText(TuningsActivity.this, R.string.working_with_local_tuning_file, Toast.LENGTH_SHORT).show();
+                    String jsonArrayLocalTunings = archivo.getString("custom_tunings", null);
+                    if (jsonArrayLocalTunings != null) {
                         Type type = new TypeToken<List<Tuning>>() {
                         }.getType();
                         tunings.addAll(new Gson().fromJson(jsonArrayLocalTunings, type));
@@ -188,10 +175,10 @@ public class TuningsActivity extends AppCompatActivity {
                     initializeAdapter();
                     return;
                 } else if (requestType.equals("DELETE")) {
-                    Toast.makeText(TuningsActivity.this, R.string.tuning_not_deleted_from_cloud_storage,Toast.LENGTH_SHORT).show();
+                    Toast.makeText(TuningsActivity.this, R.string.tuning_not_deleted_from_cloud_storage, Toast.LENGTH_SHORT).show();
                     return;
                 }
-                Toast.makeText(TuningsActivity.this, "failed: " + body + " " +errorCode, Toast.LENGTH_SHORT).show();
+                Toast.makeText(TuningsActivity.this, "failed: " + body + " " + errorCode, Toast.LENGTH_SHORT).show();
 
             }
         };

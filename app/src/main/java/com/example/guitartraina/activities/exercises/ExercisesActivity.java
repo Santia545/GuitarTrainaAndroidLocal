@@ -32,7 +32,6 @@ public class ExercisesActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_exercises);
         archivo = EncryptedSharedPreferences.getEncryptedSharedPreferences(this);
-        checkLogIn();
         Spinner spinModule = findViewById(R.id.exercise_select_spin);
         Button btnNextMonth = findViewById(R.id.button);
         btnNextMonth.setOnClickListener(view -> {
@@ -100,13 +99,4 @@ public class ExercisesActivity extends AppCompatActivity {
                 }
             }
     );
-
-    public void checkLogIn() {
-        if (archivo.contains("idUsuario")) {
-            if (archivo.getString("idUsuario", "notlogged").equals("0")) {
-                Toast.makeText(this, R.string.guest_user_prohibited, Toast.LENGTH_LONG).show();
-                finish();
-            }
-        }
-    }
 }
