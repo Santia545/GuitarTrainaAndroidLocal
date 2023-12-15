@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="recuperar_contrase_a"><u>Recover password</u></string>
+    <string name="crear_nueva_cuenta"><u>Create new account</u></string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="reportar_errores">Report an Error</string>
+    <string name="tutorial">Tutorial</string>
+    <string name="ingresa_el_titulo_del_error_ej_la_configuracion_no_se_guarda">Write the title for the error</string>
+    <string name="ingresa_el_numero_de_veces_que_ocurrio_el_error">How many times has the error occurred</string>
+    <string name="ingresa_los_pasos_para_reproducir_el_problema_ej_en_el_afinador_intentar_crear_una_afinacion">Steps to get the error</string>
+    <string name="ingresa_la_descripcion_del_problema">Write the error description</string>
+    <string name="enviar_reporte">Send report</string>
+    <string name="ingresa_tu_email">Type your Email</string>
+    <string name="ingresa_tu_contrase_a">Type your Password</string>
+    <string name="iniciar_sesion">Log In</string>
+    <string name="registro">Register</string>
+    <string name="confirma_tu_contrase_a">Confirm Password</string>
+    <string name="ingresa_tu_nombre_de_usuario">Type your user name</string>
+    <string name="registrar_cuenta">Register Account</string>
+    <string name="cambiar_contrase_a">Change Password</string>
+    <string name="ingresa_el_token_de_autenticacion">Type the authentication token</string>
+    <string name="reestablecer_contrase_a">Restore Password</string>
+    <string name="afinador">Tuner</string>
+    <string name="configuracion">Settings</string>
+    <string name="enable_posture_notifications">Enable posture notification</string>
+    <string name="afinacion_por_defecto">Default tuning</string>
+    <string name="sensibilidad_del_microfono">Microphone Sensibility:</string>
+    <string name="microfono">Microphone</string>
+    <string name="lenguaje">Language:</string>
+    <string name="log_out">Log Out:</string>
+    <string name="log_in">Log In:</string>
+    <string name="enable_practice_notifications">Enable practice notifications</string>
+    <string name="notification_time">Notification time:</string>
+    <string name="resumen_sensibilidad_mic">Set the minimum volume which the mic will capture</string>
+    <string name="ganancia_del_microfono">Microphone Gain:</string>
+    <string name="lenguajes_disponibles">Available Languages</string>
+    <string name="cuenta">Account</string>
+    <string name="click_to_logout">Click to LogOut</string>
+    <string name="click_to_login">Click to LogIn</string>
+    <string name="time_cant_be_more_than">"Time cannot be more than "</string>
+    <string name="time_cant_be_less_than">"Time cannot be less than  "</string>
+    <string name="time_format_lenght_error">Time format is not correct, make sure you submit 8 characters</string>
+    <string name="time_format_HHMMSS_error">Time must be formatted HH:MM:SS</string>
+    <string name="time_format_hh_error">Wrong time format, HH must be less than 24</string>
+    <string name="time_format_mm_error">Wrong time format, MM must be less than 60</string>
+    <string name="time_format_ss_error">Wrong time format, SS must be less than 60</string>
+    <string name="minutos">" Minutes"</string>
+    <string name="entrar_como_invitado">Guest Mode</string>
+    <string name="entrenador_de_bends">Bend Trainer</string>
+    <string name="metronomo">Metronome</string>
+    <string name="sesion_grupal">Group Session</string>
+    <string name="entrenador_de_oido">Ear Trainer</string>
+    <string name="clasificados">Ranked</string>
+    <string name="sin_clasificar">Unranked</string>
+    <string name="detective_de_ritmo">Rhythm Detective</string>
+    <string name="progreso">Progress</string>
+    <string name="ejercicios">Exercises</string>
+    <string name="fallido">"failed: "</string>
+    <string name="contrase_a_invalida">Failed: invalid password</string>
+    <string name="exito">Success</string>
+    <string name="email_incorrecto">"Failed, the email doesn\'t follow the expected pattern"</string>
+    <string name="ingresa_el_tiempo_de_recordatorio_de_postura">Type in your posture reminder time</string>
+    <string name="error_longitud_descripcion">This field length can\'t be less than 30 chars</string>
+    <string name="error_longitud_pasos">This field length can\'t be less than 5 chars</string>
+    <string name="error_numero">This field value can\'t be less than 1</string>
+    <string name="error_longitud_titulo">This field length can\'t be less than 5 chars</string>
+    <string name="espa_ol_ingles">English/Spanish</string>
+    <string name="info_mic_permiso">This function requires microphone access</string>
+    <string name="dar_permiso">Grant Permission</string>
+    <string name="modo_afinacion">switch tuning mode</string>
+    <string name="cambiar_afinacion">switch tuning</string>
+    <string name="empty_note_error">The reference note A4 can\'t be empty</string>
+    <string name="invalid_note_error">The reference note A4 can\'t be greater than 500Hz or less than 400Hz</string>
+    <string name="guest_user_prohibited">Can\'t access this function with guest user</string>
+    <string name="invalid_email_info">The email is not a valid email</string>
+    <string name="invalid_password_info">Invalid Password</string>
+    <string name="passwords_match_error">Passwords dont match</string>
+    <string name="username_length_error">The username length can\'t be less than 5 characters</string>
+    <string name="selected_tuning">Selected Tuning :</string>
+    <string name="email_type_in">Type in the account email</string>
+    <string name="email_recovery_info">If the email exists, an authorization token will be sent and it will be available for 10 minutes</string>
+    <string name="send_code">Send Code</string>
+    <string name="cancelled">Cancelled</string>
+    <string name="cancel">Cancel</string>
+    <string name="existing_token">I already have a token</string>
+    <string name="token_input">Type the 6 character token</string>
+    <string name="delete_tuning_error">Default tunings cannot be deleted</string>
+    <string name="tuner_mode_auto">AUTOMATIC MODE</string>
+    <string name="tuner_mode_manual">MANUAL MODE</string>
+    <string name="tuner_mode_ear">EAR MODE</string>
+    <string name="tuner_tight">Tight!</string>
+    <string name="tuner_loosen">Loose!</string>
+    <string name="crea_tu_afinacion">Create ur own tuning</string>
+    <string name="reset">Reset</string>
+    <string name="save">Save</string>
+    <string name="trashcan">Trashcan</string>
+    <string name="imagen_de_guitarra_electrica">Electric guitar image</string>
+    <string name="crear_afinacion_personalizada">Create Custom Tuning</string>
+    <string name="rhythm_looper">Rhythm Looper</string>
+    <string name="mic_sens_info">A 0db sensibility means the microphone wont capture any sound</string>
+    <string name="chord_library">Chord Library</string>
+    <string name="pulsos_por_minutos">Beats per Minute</string>
+    <string name="play">play</string>
+    <string name="metronome_empty_bpm_error">The beats per minute can\'t be empty</string>
+    <string name="metronome_invalid_bpm_error">The bpm can\'t be greater than 500</string>
+    <string name="pause">Pause</string>
+    <string name="metronome_accent">Accent</string>
+    <string name="root_note">Root Note</string>
+    <string name="chord_type">Chord Type</string>
+    <string name="capo_barre_chord">Play with capo or barre on indicated fret</string>
+    <string name="buscar">search</string>
+    <string name="dificultad_promedio">Average difficulty from the day&#160;</string>
+    <string name="is">"&#160;is&#160;"</string>
+
+    <string-array name="modules">
+        <item>Ear Trainer</item>
+        <item>Exercises - Spider</item>
+        <item>Exercises - Sweep</item>
+        <item>Exercises - Arpeggios</item>
+        <item>Exercises - Bends</item>
+        <item>Exercises - Scales</item>
+    </string-array>
+    <string name="dificultad_automatica">Auto-Difficulty</string>
+    <string name="tonos_del_bend">Bend Height in tones</string>
+    <string-array name="notes">
+        <item>A</item>
+        <item>A#</item>
+        <item>B</item>
+        <item>C</item>
+        <item>C#</item>
+        <item>D</item>
+        <item>D#</item>
+        <item>E</item>
+        <item>F</item>
+        <item>F#</item>
+        <item>G</item>
+        <item>G#</item>
+    </string-array>
+    <string-array name="piano_notes">
+        <item>C</item>
+        <item>C#</item>
+        <item>D</item>
+        <item>D#</item>
+        <item>E</item>
+        <item>F</item>
+        <item>F#</item>
+        <item>G</item>
+        <item>G#</item>
+        <item>A</item>
+        <item>A#</item>
+        <item>B</item>
+    </string-array>
+    <string-array name="chords">
+        <item>Major</item>
+        <item>Minor</item>
+        <item>5</item>
+        <item>7</item>
+        <item>7m</item>
+    </string-array>
+    <string name="login_tries_info">Too many failed login tries, wait the 15 minutes to try again</string>
+    <string name="googlepay_button_content_description">Google Pay</string>
+    <string name="buy_with_googlepay_button_content_description">Buy with Google Pay</string>
+    <string name="googlepay_status_unavailable">Unfortunately, Google Pay is not available on this phone.</string>
+    <string name="go_pro">GO PRO!</string>
+    <string name="_10_usd">$10 USD</string>
+    <string name="click_to_go_pro">Click to go pro</string>
+    <string name="mes_anterior">Previous Month</string>
+    <string name="mes_siguiente">Next Month</string>
+    <string name="info_charts">Register from %d months ago</string>
+
+    <string name="siguiente">Next</string>
+    <string name="respuesta_correcta">Correct Answer</string>
+    <string name="respuesta_incorrecta">Wrong Answer</string>
+    <string name="sesion_finalizada">Session ended!</string>
+    <string name="puntuacion">Score:&#160;</string>
+    <string name="nueva_sesion">New Session</string>
+    <string name="salir">Exit</string>
+    <string name="pregunta_x_15">Question: %d/15</string>
+    <string name="high_tuning_alert">Warning, sharp tuning</string>
+    <string name="high_tuning_alert_message">At least one of the strings its tuned 10 cents sharper than standar tuning</string>
+    <string name="continuar">Continue</string>
+    <string name="repetir">Repeat</string>
+    <string name="cantidad_de_notas">Amount of Notes</string>
+    <string name="ingresa_la_dificultad">Type the difficulty</string>
+    <string name="difficulty_change_description">The difficulty is the amount of notes each question has, minim 1 note, maximum 7 notes. after setting a new difficulty the session its restarted</string>
+    <string name="empty_difficult_error">The difficulty cannot be empty</string>
+    <string name="difficulty">Difficulty:</string>
+    <string name="aciertos">\nCorrect Answers:&#160;</string>
+    <string name="fallos">\nWrong Answers:&#160;</string>
+    <string name="practice_reminder">Practice Reminder</string>
+    <string name="notification_practice_reminder_desc">You havent reached your daily practice goal</string>
+    <string name="practice_notification_service_title">Guitar Traina Practice Reminder Service</string>
+    <string name="practice_notification_service_description">Tap to open the app</string>
+    <string name="posture_reminder">Posture reminder</string>
+    <string name="notification_posture_reminder_desc">Get your back Straight!</string>
+    <string name="notifications">Notifications</string>
+    <string name="notifications_count">Notifications (%1$d)</string>
+    <string name="posture">POSTURE!</string>
+    <string name="posture_dialog_info">Remember to keep a good posture while practicing</string>
+    <string name="minutes_practiced_today">Minutes Practiced Today:</string>
+
+    <string name="target_note">Target Note:</string>
+    <string name="semitones"> semitones</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="tunero">It has 3 different tuning modes\n\n
+
+    Each tuning mode can be modified with the “change tuning mode” button, where we can find the automatic mode, the manual mode and the ear mode.\n
+    The automatic mode detects thanks to the frequency the string that you want to tune without having to press any button of any string.\n
+    In manual mode, you must press the button of the corresponding string that you want to tune, be it E, A, D, G, B or E. \n
+    The ear mode plays the sound of the string to be tuned by pressing its button, only that does not show the frequencies, it only plays the sounds of the already tuned strings.\n
+    </string>
+    <string name="tunas">Once in the tuner, you must press the button on the top right to "change tunings"\n\n
+
+    This is followed by a list of different tuning types. Finally, we select one of these tunings and the display will return to the tuner, but with the selected tuning.
+    </string>
+    <string name="create_tuning">To create a tuning you must be in the section where the list of tunings is located, and at the bottom you can see a button that says "Create custom tuning"\n
+    Once the button is pressed, there will be an image of a guitar and the 6 pegs that represent each of the strings, and a list of the notes that we want each string to need will be displayed. You must do the same with the strings you want to change notes. If the tuning is not as expected, the button at the bottom left can reset the tuning. Just below the image of the guitar you must enter the tuning frequency, which is marked with a default value of 440hz. Finally, when our tuning is finished, we must press the save button located at the bottom right, to be added to the list of tunings, where it can be selected for future guitar tunings.
+    </string>
+    <string name="dashobaorda">Here we can go to one of the 13 tools of the application, which are: Exercises, Bends Trainer, Metronome, Group Session, Ear Trainer, Rhythm Detective, Rhythm Looper, Chord Library, Progress, Notifications, Classified, Unclassified and Error Reporting.
+    </string>
+    <string name="bend_trainer">Here there is the metronome tool and an on-screen graph that analyzes the notes that enter the microphone and graphs them.\n\n
+
+    Using a drop-down list, you can choose how much the note to be played will change, that is, if you choose a 1-tone bend, you will have to raise the frequency of the note by stretching the string 2 semitones.\n
+    While the bend is being performed, this tool uses an image that moves from right to left, indicating on the graph if you have to stretch the rope more or loosen it.
+    </string>
+    <string name="metronoam">In this section, sounds are reproduced at a few beats per minute. To modify the pulses per minute, a number between 1 and 500 must be selected, which indicates pulses per minute that will be entered through a text on the screen, that is, if you enter the number 100 and press the start button, the sound will be played 100 times within one minute, with an equidistant time between each sound. \n\n
+
+    Just below, there is a default fraction of 4/4, which indicates the time signature with which the sound will be played. If you do not want the default one, when you press the compass, a list will be displayed with another 6 different options of compasses where you can select the preferred one.\n\n
+
+    Finally, there is a play button that allows playing the sounds of the metronome with the previously configured values.
+    </string>
+    <string name="group_session">3 options are displayed, one to create a session, another to join a session and one to leave the session.\n
+    In addition, at the bottom it has 3 buttons, one to share the metronome, another to share the tuning and another to share an audio from the phone.
+    </string>
+    <string name="hostings">
+    Before starting the session, the app must verify that the device is connected to a Wi-Fi network.\n
+    Once inside a network the join session and create session button is disabled while you are in a session.\n\n
+
+    The share audio, metronome, tuning, and exit session buttons are enabled until you are part of a session.\n\n
+
+    There will only be one administrator of the session, said administrator can share his settings, the audio of his metronome, his settings, the tuning used and share his audio recordings with up to 10 devices.
+    </string>
+    <string name="ear_trainer">A minimum of 1 random sound is reproduced, since there are more than one sound, this has to be different from one another, each sound corresponds to 1 of the 12 existing notes.\n\n
+
+    4 multiple choice notes are taken into account where only one correct answer will be obtained, which is the note that must match the sound heard.\n\n
+
+    While progressing in the exercise, each question will allow you to repeat the sound of the note to be found to be more sure of the selected answer.\n\n
+
+    At the end of the session, after answering 15 questions where each 1 represents 1 grade point, the maximum possible being 15 points. the score is saved showing it after the last question
+    </string>
+    <string name="rythdm_detective">A section of a metronome is displayed in the upper part, in the lower space there are 3 buttons, 1 to start the audio recording, another to stop the recording and the last one to play the audio. it also has 2 pop-up images, one with a cross and one with a dove\n\n
+
+    This tool has the option of recording a piece of music at low speed in mp3 format, to later play it at different speeds (at which the permissions for use of the microphone must be activated), as the correct use of the microphone is verified so that the recording can be reproduced with the new speeds. \n\n
+
+    You can play 4 notes in 4 seconds with a separation of 1 second between each note, keeping the rhythm at another speed would be that there is proportionally the same separation between all the notes, for example 4 notes in 2 seconds, with .5 seconds between each note.
+    </string>
+    <string name="loopers">At the top there is a box where the YouTube link of the video is inserted.\n\n
+
+    Below the video there are 2 markers \(start marker and end marker\), and between these the selected video extract will be repeated.\n\n
+
+    Below the markers you can manually enter the start time and end time of the loop in seconds.\n\n
+
+    Finally, there is a marker that will allow us to modify the speed of the video, taking the slowest with .25s and the fastest with 2s.\n\n
+
+    Finally we press the \"Loop\" button and that\'s it, we will have our loop playback
+    </string>
+    <string name="chord_librariu">The goal is to find the desired note name or chord of any note.\n\n
+
+    First we select the fundamental note of the chord that we want to find, and just below the type of chord \(which is its variation\) is selected, such as major, minor, seventh and fifth chords\n\n
+
+    Pressing the find chords button will refresh the screen and show the chord image, and only the basic figure image will be saved.\n\n
+
+    Finally, the screen will show which fret the figure will start on.
+    </string>
+    <string name="progoras">The graph shown indicates the progress / progress that has been recorded to date.\n\n
+
+    If the user plan is standard, the progress will continue to be graphed until the 30 day pass. On the other hand, if the user is PRO this record will not be deleted and said progress can be kept for a longer time \n\n
+
+    In addition to the PRO user, there is a search box where you can enter the name of other users to see their progress
+    </string>
+    <string name="notifiaca">To access notifications we must find ourselves in the configuration section. Once there, at the top is a text that says notifications.\n
+    4 values can be configured:\n
+    The first and third are two toggle options on whether you want to turn on the Practice Reminder and Posture Reminder notifications respectively.\n
+    And the second and fourth allow you to modify the notification time, which is the frequency with which we will be notified. \n
+    </string>
+    <string name="ranked">In this module the list of recordings is displayed, showing the title of the recording, the star rating and the number of notes. For a recording to enter this section, they must have 10 votes and a score of at least 3.5 stars. It has a button that allows you to make a recording and also has a search engine that searches among the titles of the recordings. When one of the scores is clicked, it is sent to the challenge section</string>
+    <string name="unranked">In this module the list of recordings is displayed, showing the title of the recording, the star rating and the number of notes. But unlike the classified recordings, these have less than 10 votes and a score of less than 3.5 stars. It also has a search engine that searches among the titles of the recordings.</string>
+    <string name="bug_report">The error report has the function of notifying the support of any error or malfunction of the application\n\n
+
+    There are 4 fields that must be filled out before sending the error report\n\n
+
+    1\) Bug title\n
+    2\) Number of times the error occurred\n
+    3\) Steps to repeat the problem\n
+    4\) Detailed description of the problem\n\n
+
+    Once they are full, click on the \"send report\" button and it will reach the application support email.
+    </string>
+    <string name="setifnas">In this section at the top of you can configure notifications regarding the use of the application.\n
+    Later, there is a text that says tuner, in this part you can modify the standard tuning when using the tuner, which by default is E Standard. In case it is not the one to our liking, simply press the tuning that is E Standard and a list with more tunings will be displayed. The option of our preference is selected and it remains registered as the default tuning.\n
+    Under the default tuning you have the option to modify the microphone sensitivity, which is a slider, moving it to the left side lowers the microphone sensitivity, and moving it to the right side increases it.\n
+    Afterwards, you have the option to modify the microphone gain with the same slider moving it to the left to decrease it and to the right to increase it.\n
+    Below is the language option, where by pressing the language you have the option to select between Spanish and English will appear.\n
+    Finally, below everything you have the account settings, where you can select the option to become a PRO user if you are not, the option to log out and finally the option to log in, which will only be enabled if the user session has not been started.\n</string>
+    <string name="paymony">16</string>
+    <string name="main">The application has a navigation bar at the bottom with 3 different options that can be selected. \n
+    On the left side and the one that opens by default we find the tuner, where you can access through it the list of tunings and the creation of a tuning\n
+    In the center we have the panel, where we can go to any of the application\'s 13 tools, which are: Exercises, Bends Trainer, Metronome, Group Session, Ear Trainer, Rhythm Detective, Rhythm Looper, Chord Library, Progress, Notifications, Classified, Unclassified, and Error Reporting.\n
+    Finally, on the right side we have access to the configuration section, where we can establish the values of our preference when configuring the application, where there are notifications, the default tuning, the microphone gain, the language, the account and the option to log out and log in.\n
+    </string>
+    <string name="compite">Compete</string>
+    <string name="grabar">Record</string>
+    <string name="descripcion">Description</string>
+    <string name="titulo">Title</string>
+    <string name="publicar">Publish</string>
+    <string name="reproducir">Play</string>
+    <string name="regrabar">Re-Record</string>
+    <string name="info_permission_recorder">"This tool requires read/write permissions on the external storage and microphone access "</string>
+    <string name="no_internet_info">You must have internet access to use this function</string>
+    <string name="pro_user_error_info">This function is exclusive to the PRO user, consider buying the PRO status in the config</string>
+    <string name="pick_file">Pick a file before continuing.</string>
+    <string name="choose_host">Choose a Host to join</string>
+    <string name="refresh">Refresh</string>
+    <string name="host">Create Session</string>
+    <string name="pick_media">Pick audio</string>
+    <string name="start_hosting">Start Session</string>
+    <string name="host_indicator">Host: %1$s</string>
+    <string name="start">Start</string>
+    <string name="downloading">Downloading…</string>
+    <string name="guest">Guest</string>
+    <string name="share_tuning">Share tuning</string>
+    <string name="share_metronome">Share metronome</string>
+    <string name="share_audio">Share audio</string>
+    <string name="confirm">Confirm tuning</string>
+    <string name="member_shared">A member of the session has shared a tuning, accept?</string>
+    <string name="rejected">Your tuning has been rejected.</string>
+    <string name="main_page">Main page</string>
+    <string name="afinaciones">Tunings</string>
+    <string name="buy_pro">Buy pro account</string>
+    <string name="success_bug_report">Successfully reported, thanks for the submission</string>
+    <string name="stop">Stop</string>
+    <string name="listo">Ready</string>
+    <string name="permission_required_x">This tool can\'t work witouth the permission:&#160;</string>
+    <string name="loudness_captured_by_the_mic">Loudness captured by the mic:</string>
+    <string name="historic_average_score">Promedio historico:</string>
+    <string name="ok">OK</string>
+    <string name="iniciar_analisis">Start Analisis</string>
+    <string name="de_velocidad">Velocity %:</string>
+    <string name="precision_ms">Precision +-mS:</string>
+    <string name="empty_field">The field can\'t be empty</string>
+    <string name="precision_range_error">The precision value can only be between 10 ms and 100ms</string>
+    <string name="velocity_range_error">The speed value can only be between 100% and 500%</string>
+    <string name="exercises_invalid_bpm_error">The bpm value can\'t be less than 30 or more than 300</string>
+    <string name="low_score_info">You must at least get 70% of the notes to get to the next level</string>
+    <string name="secuencia">Sequence:</string>
+
+    <string-array name="exercises">
+        <item>Spider</item>
+        <item>Sweep</item>
+        <item>Arpeggios</item>
+        <item>Bends</item>
+        <item>Scales</item>
+    </string-array>
+    <string name="type_in_your_daily_practice_goal">Type in your daily practice goal</string>
+    <string name="ingresa_el_titulo_de_la_afinaci_n">Enter this tuning\'s title</string>
+    <string name="es_necesaria_una_conexion_a_internet_para_guardar_la_afinacion">You need an internet connection to save this tuning.</string>
+    <string name="guardar_afinacion">Save tuning</string>
+    <string name="cancelar">Cancel</string>
+    <string name="title_length_cant_be_less_than_5_characters">Title length cannot be less than 5 characters</string>
+    <string name="description_length_cant_be_less_than_5_characters">Description length cannot be less than 5 characters</string>
+    <string name="tienes_que_escuchar_completa_la_grabaci_n_antes_de_puntuarla">You have to listen to the full recording before rating</string>
+    <string name="deteniendo">Stopping</string>
+    <string name="la_afinacion_de_la_cuerda_no_puede_ser_mas_de_3_tonos_por_arriba_de_la_afinacion_estandar">A chords tuning cannot be 3 tones above the standard</string>
+    <string name="el_titulo_no_puede_estar_vac_o">Title cannot be empty</string>
+    <string name="working_with_local_tuning_file">Working with local tuning file</string>
+    <string name="tuning_not_deleted_from_cloud_storage">Tuning not deleted from cloud storage</string>
+    <string name="headphones_info">Headphones are needed so that the sound from the device does not interfere with the recording</string>
+    <string name="cargando">Loading</string>
+    <string name="error_existing_email">email already exists</string>
+    <string name="invalid_token_or_email">Invalid token or email</string>
+    <string name="outdated_token">Oudated Token</string>
+
+</resources>

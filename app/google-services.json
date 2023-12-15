@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "467863218578",
+    "project_id": "guitartraina",
+    "storage_bucket": "guitartraina.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:467863218578:android:89403bc72fa9aec0e3f94b",
+        "android_client_info": {
+          "package_name": "com.example.guitartraina"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "467863218578-qbrrqmf74jeiqu2vlrhhv2sr0r9dvsq0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDFNBklQaewLNqro13xCXhTsrRUqt39Vqo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "467863218578-qbrrqmf74jeiqu2vlrhhv2sr0r9dvsq0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

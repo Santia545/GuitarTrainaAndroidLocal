@@ -1,0 +1,27 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:paddingStart="19dp"
+    android:paddingEnd="19dp">
+
+    <TextView
+        android:id="@+id/tv_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/loudness_captured_by_the_mic"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:paddingVertical="10dp" />
+
+    <TextView
+        android:id="@+id/tv_loudness"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center" />
+    <com.example.guitartraina.ui.views.VolumeView
+        android:id="@+id/volumeView"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"/>
+</LinearLayout>

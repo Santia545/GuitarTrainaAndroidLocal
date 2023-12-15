@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_ejercicios"
+        android:icon="@drawable/logo_guitar_traina_pua"
+        android:title="@string/ejercicios" />
+
+    <item
+        android:id="@+id/navigation_entrenador_de_bends"
+        android:icon="@drawable/ic_guitar_neck"
+        android:title="@string/entrenador_de_bends" />
+
+    <item
+        android:id="@+id/navigation_metronomo"
+        android:icon="@drawable/ic_baseline_av_timer_24"
+        android:title="@string/metronomo" />
+    <item
+        android:id="@+id/navigation_entrenador_de_oido"
+        android:icon="@drawable/ic_baseline_hearing_24"
+        android:title="@string/entrenador_de_oido" />
+
+    <item
+        android:id="@+id/navigation_rythm_looper"
+        android:icon="@drawable/baseline_loop_24"
+        android:title="@string/rhythm_looper" />
+    <item
+        android:id="@+id/navigation_chord_library"
+        android:icon="@drawable/diagrama_de_acordes"
+        android:title="@string/chord_library" />
+    <item
+        android:id="@+id/navigation_progreso"
+        android:icon="@drawable/ic_baseline_bar_chart_24"
+        android:title="@string/progreso" />
+    <item
+        android:id="@+id/notifications"
+        android:icon="@drawable/baseline_notifications_24"
+        android:title="@string/notifications" />
+</menu>

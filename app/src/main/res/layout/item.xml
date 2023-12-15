@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/item"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+        <TextView
+            android:id="@+id/tuning_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:textSize="25sp">
+        </TextView>
+
+        <TextView
+            android:id="@+id/tuning_notes"
+            android:textColor="?android:attr/textColorHint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tuning_title"
+            android:textSize="15sp">
+        </TextView>
+
+        <ImageButton
+            android:id="@+id/tuning_delete"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:backgroundTint="#00FFFFFF"
+            android:scaleType="fitXY"
+            android:src="@drawable/baseline_delete_24"
+            app:tint="?android:attr/textColor"
+            android:visibility="gone"
+            android:contentDescription="@string/trashcan">
+
+        </ImageButton>
+
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

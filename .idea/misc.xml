@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/CORS90/Documents/CETI/8Semestre/Proyecto 2/TEST/GuitarTraina/app/src/main/res/layout/activity_home.xml" value="0.19384057971014493" />
+        <entry key="..\:/Users/CORS90/Documents/CETI/8Semestre/Proyecto 2/TEST/GuitarTraina/app/src/main/res/layout/activity_log_in.xml" value="0.2" />
+        <entry key="..\:/Users/CORS90/Documents/CETI/8Semestre/Proyecto 2/TEST/GuitarTraina/app/src/main/res/layout/activity_register.xml" value="0.1" />
+        <entry key="..\:/Users/CORS90/Documents/CETI/8Semestre/Proyecto 2/TEST/GuitarTraina/app/src/main/res/layout/activity_splash_screen.xml" value="0.19384057971014493" />
+        <entry key="..\:/Users/CORS90/Documents/CETI/8Semestre/Proyecto2/TEST/GuitarTraina/app/src/main/res/drawable/ic_baseline_settings_24.xml" value="0.1125" />
+        <entry key="..\:/Users/CORS90/Documents/CETI/8Semestre/Proyecto2/TEST/GuitarTraina/app/src/main/res/drawable/ic_dashboard_black_24dp.xml" value="0.1125" />
+        <entry key="..\:/Users/CORS90/Documents/CETI/8Semestre/Proyecto2/TEST/GuitarTraina/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1125" />
+        <entry key="..\:/Users/CORS90/Documents/CETI/8Semestre/Proyecto2/TEST/GuitarTraina/app/src/main/res/drawable/ic_notifications_black_24dp.xml" value="0.1125" />
+        <entry key="..\:/Users/CORS90/Documents/CETI/8Semestre/Proyecto2/TEST/GuitarTraina/app/src/main/res/drawable/ic_tuning_fork.xml" value="0.1" />
+        <entry key="..\:/Users/CORS90/Documents/CETI/8Semestre/Proyecto2/TEST/GuitarTraina/app/src/main/res/layout/activity_bug_report.xml" value="0.11284046692607004" />
+        <entry key="..\:/Users/CORS90/Documents/CETI/8Semestre/Proyecto2/TEST/GuitarTraina/app/src/main/res/layout/activity_home.xml" value="0.1" />
+        <entry key="..\:/Users/CORS90/Documents/CETI/8Semestre/Proyecto2/TEST/GuitarTraina/app/src/main/res/layout/activity_log_in.xml" value="0.2" />
+        <entry key="..\:/Users/CORS90/Documents/CETI/8Semestre/Proyecto2/TEST/GuitarTraina/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/CORS90/Documents/CETI/8Semestre/Proyecto2/TEST/GuitarTraina/app/src/main/res/layout/activity_register.xml" value="0.1" />
+        <entry key="..\:/Users/CORS90/Documents/CETI/8Semestre/Proyecto2/TEST/GuitarTraina/app/src/main/res/layout/activity_reset_password.xml" value="0.18614130434782608" />
+        <entry key="..\:/Users/CORS90/Documents/CETI/8Semestre/Proyecto2/TEST/GuitarTraina/app/src/main/res/layout/activity_splash_screen.xml" value="0.13405797101449277" />
+        <entry key="..\:/Users/CORS90/Documents/CETI/8Semestre/Proyecto2/TEST/GuitarTraina/app/src/main/res/layout/fragment_afinador.xml" value="0.15942028985507245" />
+        <entry key="..\:/Users/CORS90/Documents/CETI/8Semestre/Proyecto2/TEST/GuitarTraina/app/src/main/res/layout/fragment_bug_report.xml" value="0.24166666666666667" />
+        <entry key="..\:/Users/CORS90/Documents/CETI/8Semestre/Proyecto2/TEST/GuitarTraina/app/src/main/res/layout/fragment_configuration.xml" value="0.1" />
+        <entry key="..\:/Users/CORS90/Documents/CETI/8Semestre/Proyecto2/TEST/GuitarTraina/app/src/main/res/layout/fragment_dashboard.xml" value="0.16" />
+        <entry key="..\:/Users/CORS90/Documents/CETI/8Semestre/Proyecto2/TEST/GuitarTraina/app/src/main/res/layout/fragment_home.xml" value="0.1" />
+        <entry key="..\:/Users/CORS90/Documents/CETI/8Semestre/Proyecto2/TEST/GuitarTraina/app/src/main/res/layout/fragment_notifications.xml" value="0.24166666666666667" />
+        <entry key="..\:/Users/CORS90/Documents/CETI/8Semestre/Proyecto2/TEST/GuitarTraina/app/src/main/res/menu/bottom_nav_menu.xml" value="0.1" />
+        <entry key="..\:/Users/CORS90/Documents/CETI/8Semestre/Proyecto2/TEST/GuitarTraina/app/src/main/res/menu/dashboard_nav_menu.xml" value="0.24166666666666667" />
+        <entry key="..\:/Users/CORS90/Documents/CETI/8Semestre/Proyecto2/TEST/GuitarTraina/app/src/main/res/xml-v26/config.xml" value="0.1" />
+        <entry key="..\:/Users/CORS90/Documents/CETI/8Semestre/Proyecto2/TEST/GuitarTraina/app/src/main/res/xml/config.xml" value="0.2" />
+        <entry key="..\:/Users/CORS90/Documents/CETI/8Semestre/Proyecto2/TEST/GuitarTraina/app/src/main/res/xml/preferences.xml" value="0.152" />
+        <entry key="..\:/Users/Departamento/Desktop/GuitarTraina/app/src/main/res/layout/activity_home.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/Departamento/Desktop/GuitarTraina/app/src/main/res/layout/activity_log_in.xml" value="0.264" />
+        <entry key="..\:/Users/Departamento/Desktop/GuitarTraina/app/src/main/res/layout/activity_login.xml" value="0.1" />
+        <entry key="..\:/Users/Departamento/Desktop/GuitarTraina/app/src/main/res/layout/activity_register.xml" value="0.25" />
+        <entry key="..\:/Users/Departamento/Desktop/GuitarTraina/app/src/main/res/layout/activity_splash_screen.xml" value="0.2" />
+      </map>
+    </option>
+  </component>
+  <component name="EntryPointsManager">
+    <entry_points version="2.0">
+      <entry_point TYPE="field" FQNAME="com.example.guitartraina.ui.tuner.TunerFragment binding" />
+    </entry_points>
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="android.webkit.JavascriptInterface" />
+    </list>
+    <pattern value="com.example.guitartraina.ui.tuner.TunerFragment" />
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="jbr-17" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.096" />
+      </ProjectState>
+    </option>
+  </component>
+</project>

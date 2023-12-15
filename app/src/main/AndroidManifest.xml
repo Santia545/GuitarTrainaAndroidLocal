@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.guitartraina">
+
+    <uses-sdk tools:overrideLibrary="androidx.security" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
+    <application
+        android:allowBackup="false"
+        android:fullBackupContent="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.GuitarTraina"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="m">
+        <activity
+            android:name="com.example.guitartraina.activities.exercises.ExerciseActivity"
+            android:exported="false"
+            android:screenOrientation="landscape"
+            android:configChanges="orientation|keyboardHidden"
+            />
+        <activity
+            android:name="com.example.guitartraina.activities.bendtrainer.BendTrainerActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.guitartraina.activities.exercises.ExercisesActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.guitartraina.activities.NotificationsActivity"
+            android:exported="false"
+            android:parentActivityName="com.example.guitartraina.activities.MainActivity" />
+        <!--Need to remove volley, store progress on shared preferences -->
+        <activity
+            android:name="com.example.guitartraina.activities.ProgressActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.example.guitartraina.activities.EarTrainerActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.guitartraina.activities.ChordLibraryActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.guitartraina.activities.LooperActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.guitartraina.activities.metronome.MetronomeActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.guitartraina.activities.tuner.TuningCreationActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.guitartraina.activities.tuner.TuningsActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.guitartraina.activities.tuner.YoutubePlayerActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.guitartraina.activities.MainActivity"
+            android:exported="false"
+            android:label="@string/title_activity_main" />
+        <activity
+            android:name="com.example.guitartraina.activities.SplashScreen"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service android:name="com.example.guitartraina.services.PracticeNotificationService" />
+        <service android:name="com.example.guitartraina.services.PostureNotificationService" />
+    </application>
+
+</manifest>

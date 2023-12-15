@@ -1,0 +1,428 @@
+<resources>
+    <string name="app_name" translatable="false">GuitarTraina</string>
+    <string name="recuperar_contrase_a"><u>Recuperar Contraseña</u></string>
+    <string name="crear_nueva_cuenta"><u>Crear nueva cuenta</u></string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_home">Hogar</string>
+    <string name="title_dashboard">Panel</string>
+    <string name="title_notifications">Notificaciones</string>
+    <string name="tutorial">Tutorial</string>
+    <string name="reportar_errores">Reportar Errores</string>
+    <string name="ingresa_el_titulo_del_error_ej_la_configuracion_no_se_guarda">Ingresa el titulo del error Ej: La configuracion no se guarda</string>
+    <string name="ingresa_el_numero_de_veces_que_ocurrio_el_error">Ingresa el numero de veces que ocurrio el Error</string>
+    <string name="ingresa_los_pasos_para_reproducir_el_problema_ej_en_el_afinador_intentar_crear_una_afinacion">Ingresa los pasos para reproducir el problema. Ej: En el afinador intentar crear una afinacion</string>
+    <string name="ingresa_la_descripcion_del_problema">Ingresa la descripcion del problema:</string>
+    <string name="enviar_reporte">Enviar Reporte</string>
+    <string name="ingresa_tu_email">Ingresa tu Email</string>
+    <string name="ingresa_tu_contrase_a">Ingresa tu Contraseña</string>
+    <string name="iniciar_sesion">Iniciar Sesion</string>
+    <string name="registro">Registro</string>
+    <string name="confirma_tu_contrase_a">Confirma tu Contraseña</string>
+    <string name="ingresa_tu_nombre_de_usuario">Ingresa tu nombre de Usuario</string>
+    <string name="registrar_cuenta">Registrar Cuenta</string>
+    <string name="cambiar_contrase_a">Cambiar contraseña</string>
+    <string name="ingresa_el_token_de_autenticacion">Ingresa el token de autenticacion</string>
+    <string name="reestablecer_contrase_a">Reestablecer Contraseña</string>
+    <string name="guitartraina_logo" translatable="false">GuitarTraina Logo</string>
+    <string name="c_sar_santiago_inc" translatable="false">César Santiago INC</string>
+    <string name="afinador">Afinador</string>
+    <string name="configuracion">Configuracion</string>
+    <string name="enable_posture_notifications">Activar notificaciones de postura</string>
+    <string name="afinacion_por_defecto">Afinacion por defecto</string>
+    <string name="sensibilidad_del_microfono">Sensibilidad del Microfono:</string>
+    <string name="microfono">Microfono</string>
+    <string name="lenguaje">Lenguaje:</string>
+    <string name="log_out">Cerrar Sesión:</string>
+    <string name="log_in">Iniciar Sesión</string>
+    <string name="enable_practice_notifications">Activar notificaciones de practica</string>
+    <string name="notification_time">Tiempo de notificacion:</string>
+    <string name="resumen_sensibilidad_mic">Establece el volumen minimo que el microfono capturará</string>
+    <string name="ganancia_del_microfono">Ganancia del microfono</string>
+    <string name="lenguajes_disponibles">Lenguajes Disponibles</string>
+    <string name="cuenta">Cuenta</string>
+    <string name="click_to_logout">Click para cerrar sesión</string>
+    <string name="click_to_login">Click para iniciar sesión</string>
+    <string name="time_cant_be_more_than">"El tiempo no puede ser mayor que "</string>
+    <string name="time_cant_be_less_than">"El tiempo no puede ser menor que "</string>
+    <string name="time_format_lenght_error">El formato de tiempo no es correcto, asegurante  de ingresar solo 8 caracteres</string>
+    <string name="time_format_HHMMSS_error">"El tiempo debe seguir el siguiente formato: HH:MM:SS "</string>
+    <string name="time_format_hh_error">Formato incorrecto, HH debe ser menor a 24</string>
+    <string name="time_format_mm_error">Formato incorrecto, MM debe ser menor a 60</string>
+    <string name="time_format_ss_error">Formato incorrecto, SS debe ser menor a 60</string>
+    <string name="minutos">" Minutos"</string>
+    <string name="entrar_como_invitado">Entrar Como INVITADO</string>
+    <string name="entrenador_de_bends">Entrenador de Bends</string>
+    <string name="metronomo">Metronomo</string>
+    <string name="sesion_grupal">Sesion Grupal</string>
+    <string name="entrenador_de_oido">Entrenador de Oido</string>
+    <string name="clasificados">Clasificados</string>
+    <string name="sin_clasificar">Sin Clasificar</string>
+    <string name="detective_de_ritmo">Detective de Ritmo</string>
+    <string name="progreso">Progreso</string>
+    <string name="ejercicios">Ejercicios</string>
+    <string name="contrase_a_invalida">Fallido: contraseña incorrecta</string>
+    <string name="exito">Exito</string>
+    <string name="email_incorrecto">"Error el email no sigue el formato correcto "</string>
+    <string name="fallido">Fallido:</string>
+    <string name="error_longitud_descripcion">"La longitud del campo no puede ser menor a 30 caracteres "</string>
+    <string name="error_longitud_pasos">"La longitud del campo no puede ser menor a 5 caracteres "</string>
+    <string name="error_numero">"El numero de veces que ha ocurrido el error no puede ser menor a 1 "</string>
+    <string name="error_longitud_titulo">"La longitud del campo no puede ser menor a 5 caracteres "</string>
+    <string name="ingresa_el_tiempo_de_recordatorio_de_postura">Ingresa el tiempo de recordatorio de postura</string>
+    <string name="espa_ol_ingles">Español/Inglés</string>
+    <string name="info_mic_permiso">Este modulo requiere permisos de microfono para funcionar</string>
+    <string name="dar_permiso">Dar Permiso</string>
+    <string name="la4_freq" translatable="false">440</string>
+    <string name="modo_afinacion">cambiar modo de afinacion</string>
+    <string name="cambiar_afinacion">cambiar afinacion</string>
+    <string name="notification_time_5min" translatable="false">00:05:00</string>
+    <string name="notification_time_2min" translatable="false">00:02:00</string>
+    <string name="empty_note_error">El valor de A4, no puede estar vacio</string>
+    <string name="invalid_note_error">El valor de A4, no puede ser mayor a 500 ni menor a 400Hz</string>
+    <string name="guest_user_prohibited">No puedes acceder a este modulo como usuario invitado</string>
+    <string name="invalid_email_info">El email ingresado no es un email valido</string>
+    <string name="invalid_password_info">La contraseña no es valida</string>
+    <string name="passwords_match_error">Las contraseñas no coinciden</string>
+    <string name="username_length_error">El nombre de usuario no puede ser menor a 5 caracteres</string>
+    <string name="selected_tuning">"Afinacion seleccionada: "</string>
+    <string name="email_type_in">Ingresa el email de la cuenta</string>
+    <string name="email_recovery_info">Si el email existe, se enviará un token de autorizacion que estará disponible durante 10 minutos</string>
+    <string name="send_code">Enviar Codigo</string>
+    <string name="cancelled">Cancelado</string>
+    <string name="cancel">Cancelar</string>
+    <string name="existing_token">Ya tengo un codigo</string>
+    <string name="token_input">Ingresa los 6 caracteres del token</string>
+    <string name="delete_tuning_error">No se pueden eliminar las afinaciones predeterminadas</string>
+    <string name="default_tunings" translatable="false">
+    "[
+        {
+          frequencies: \"[E 82.41, A 110.00, D 146.83, G 196.00, B 246.94, E 329.63, A 440]\",
+          title: \"E Standar \",
+          \"tuningId\": -1
+        },
+        {
+          frequencies: \"[Eb 77.78, Ab 103.83, Db 138.59, Gb 185.00, Bb 233.08, Eb 311.13, A 440]\",
+          title: \"Eb Standar\",
+          tuningId: -2
+        },
+        {
+          frequencies: \"[D 73.42, G 98.00, C 130.81, F 174.61, A 220.00, D 293.66, A 440]\",
+          title: \"D Standar\",
+          tuningId: -3
+        },
+        {
+          frequencies: \"[D 73.42, A 110.00, D 146.83, G 196.00, B 246.94, E 329.63, A 440]\",
+          title: \"Drop D\",
+          tuningId: -4
+        },
+        {
+          frequencies: \"[C# 69.30, Ab 103.83, Db 138.59, Gb 185.00, Bb 233.08, Eb 311.13, A 440]\",
+          title: \"Drop C#\",
+          tuningId: -5
+        },
+        {
+          frequencies: \"[C 65.41, G 98.00, C 130.81, F 174.61, A 220.00, D 293.66, A 440]\",
+          title: \"Drop C\",
+          tuningId: -6
+        }
+    ]"
+    </string>
+    <string name="tuner_mode_auto">MODO AUTOMATICO</string>
+    <string name="tuner_mode_manual">MODO MANUAL</string>
+    <string name="tuner_mode_ear">MODO DE OIDO</string>
+    <string name="tuner_tight">Aprieta!</string>
+    <string name="tuner_loosen">Afloja!</string>
+    <string name="tuner_ok" translatable="false">OK!</string>
+    <string name="crea_tu_afinacion">Crea tu Afinacion</string>
+    <string name="a4_x_hz" translatable="false">A4= X Hz</string>
+    <string name="save">Guardar</string>
+    <string name="reset">Resetear</string>
+    <string name="trashcan">Bote de Basura</string>
+    <string name="imagen_de_guitarra_electrica">Imagen de Guitarra electrica</string>
+    <string name="crear_afinacion_personalizada">Crear Afinacion Personalizada</string>
+    <string name="rhythm_looper">Reproductor en Bucle</string>
+    <string name="mic_sens_info">Una sensibilidad de 0 significa que el microfono no captura ningun sonido</string>
+    <string name="chord_library">Biblioteca de Acordes</string>
+    <string name="pulsos_por_minutos">Pulsos por Minutos</string>
+    <string name="defalut_bpm" translatable="false">120</string>
+    <string name="play">Reproducir</string>
+    <string name="metronome_empty_bpm_error">Los pulsos por minuto no pueden quedar vacios</string>
+    <string name="metronome_invalid_bpm_error">El valor de los pulsos por minuto no puede ser mayor a 500</string>
+    <string name="pause">Pausar</string>
+    <string name="metronome_accent">Acento</string>
+    <string name="root_note">Nota Fundamental</string>
+    <string name="chord_type">Tipo de Acorde</string>
+    <string name="capo_barre_chord">Toca con capo o con cejilla en el traste indicado</string>
+    <string name="login_tries_info">Demasiados intentos fallidos, espera los 15 minutos necesarios para volver a iniciar sesión</string>
+    <string name="buscar">buscar</string>
+    <string name="dificultad_promedio">Dificultad promedio del dia&#160;</string>
+    <string name="is">"&#160;es&#160;"</string>
+    <string name="mes_anterior">Mes Anterior</string>
+    <string name="mes_siguiente">Mes siguiente</string>
+    <string name="info_charts">Registros de hace %d meses</string>
+    <string-array name="modules">
+        <item>Entrenador de oido</item>
+        <item>Ejercicios - Araña</item>
+        <item>Ejercicios - Sweep</item>
+        <item>Ejercicios - Arpeggios</item>
+        <item>Ejercicios - Bends</item>
+        <item>Ejercicios - Escalas</item>
+    </string-array>
+    <string name="siguiente">Siguiente</string>
+    <string name="respuesta_correcta">Respuesta Correcta</string>
+    <string name="respuesta_incorrecta">Respuesta Incorrecta</string>
+    <string name="sesion_finalizada">Sesion Finalizada!</string>
+    <string name="puntuacion">Puntacion:&#160;</string>
+    <string name="nueva_sesion">Nueva Sesion</string>
+    <string name="salir">Salir</string>
+    <string name="pregunta_x_15">Pregunta: %d/15</string>
+    <string name="high_tuning_alert">Alerta, afinacion muy aguda</string>
+    <string name="high_tuning_alert_message">Por lo menos alguna de las cuerdas está afinada mas de 10 cents arriba de la afinacion estandar de guitarra, esto puede provocar que se haga daño al instrumento</string>
+    <string name="continuar">Continuar</string>
+    <string name="dificultad_automatica">Auto-Dificultad</string>
+    <string name="repetir">Repetir</string>
+    <string name="cantidad_de_notas">Cantidad de Notas</string>
+    <string name="ingresa_la_dificultad">Ingresa la dificultad</string>
+    <string name="difficulty_change_description">La dificultad es el numero de notas a identificar por pregunta, minimo 1 y maximo 7. al cambiar la dificultad se reinicia la sesion actual</string>
+    <string name="empty_difficult_error">La dificultad no puede estar vacía</string>
+    <string name="difficulty">Dificultad:&#160;</string>
+    <string name="aciertos">\nAciertos:&#160;</string>
+    <string name="fallos">\nFallos:&#160;</string>
+    <string name="practice_reminder">Recordatorio de Practica</string>
+    <string name="notification_practice_reminder_desc">No has alcanzado tu meta de practica diaria</string>
+    <string name="practice_notification_service_title">Servicio de Recordatorio de Practica de Guitar Traina</string>
+    <string name="practice_notification_service_description">Presiona para abrir la aplicación</string>
+    <string name="posture_reminder">Recordatorio de postura</string>
+    <string name="notification_posture_reminder_desc">Endereza tu espalda!</string>
+    <string name="notifications">Notificaciones</string>
+    <string name="notifications_count">Notificaciones (%1$d)</string>
+    <string name="posture">POSTURA!</string>
+    <string name="posture_dialog_info">Recuerda mantener una buena postura al practicar</string>
+    <string name="minutes_practiced_today">Minutos Practicados Hoy:</string>
+
+    <string name="tonos_del_bend">Tonos del Bend</string>
+    <string name="target_note">Nota Objetivo:</string>
+    <string name="semitones"> semitonos</string>
+    <string name="compite">Compite</string>
+    <string name="grabar">Grabar</string>
+    <string name="descripcion">Descripcion</string>
+    <string name="titulo">Titulo</string>
+    <string name="publicar">Publicar</string>
+    <string name="reproducir">Reproducir</string>
+    <string name="regrabar">Regrabar</string>
+    <string name="info_permission_recorder">Se requieren permisos de lectura/escritura de almacenamiento externo y de microfono</string>
+    <string name="pick_file">Escoja un archivo antes de continuar.</string>
+    <string name="choose_host">Elige un host para unirte.</string>
+    <string name="refresh">Recargar</string>
+    <string name="host">Crear Sesion</string>
+    <string name="pick_media">Elegir audio</string>
+    <string name="start_hosting">Inicializar sesion</string>
+    <string name="ph_time" translatable="false">00:00</string>
+    <string name="host_indicator">Host: %1$s</string>
+    <string name="start">Iniciar</string>
+    <string name="downloading">Descargando…</string>
+    <string name="guest">Invitado</string>
+    <string name="share_tuning">Compartir afinación</string>
+    <string name="share_metronome">Compartir metronomo</string>
+    <string name="share_audio">Compartir audio</string>
+    <string name="confirm">Confirmar afinación</string>
+    <string name="member_shared">Un miembro de la sesión ha compartido una afinación, ¿aceptar?</string>
+    <string name="rejected">Tu afinación ha sido rechazada</string>
+    <string-array name="notes">
+        <item>La</item>
+        <item>La#</item>
+        <item>Si</item>
+        <item>Do</item>
+        <item>Do#</item>
+        <item>Re</item>
+        <item>Re#</item>
+        <item>Mi</item>
+        <item>Fa</item>
+        <item>Fa#</item>
+        <item>Sol</item>
+        <item>Sol#</item>
+    </string-array>
+    <string-array name="piano_notes">
+        <item>Do</item>
+        <item>Do#</item>
+        <item>Re</item>
+        <item>Re#</item>
+        <item>Mi</item>
+        <item>Fa</item>
+        <item>Fa#</item>
+        <item>Sol</item>
+        <item>Sol#</item>
+        <item>La</item>
+        <item>La#</item>
+        <item>Si</item>
+    </string-array>
+    <string-array name="chords">
+        <item>Mayor</item>
+        <item>Menor</item>
+        <item>5</item>
+        <item>7</item>
+        <item>7m</item>
+    </string-array>
+
+    <string name="googlepay_button_content_description">Google Pay</string>
+    <string name="buy_with_googlepay_button_content_description">Comprar con Google Pay</string>
+    <string name="googlepay_status_unavailable">Desafortunadamente, Google Pay no está disponible en su dispositivo.</string>
+    <string name="go_pro">CONVERTIRSE EN PRO!</string>
+    <string name="_10_usd">$10 USD</string>
+    <string name="click_to_go_pro">Click para convertirse en pro</string>
+    <string name="next">Siguiente</string>
+    <string name="previous">Anterior</string>
+
+
+    <string name="tunero">Se cuenta con 3 distintos modos de afinación\n\n
+
+    Cada modo de afinación podrá modificarse con el botón de “cambiar modo de afinación”, donde podemos encontrar el modo automático, el modo manual y el modo de oído.\n
+    El modo automático detecta gracias a la frecuencia la cuerda que se desea afinar sin necesidad de presionar ningún botón de ninguna cuerda.\n
+    El modo manual se debe de presionar el botón de la cuerda correspondiente que se desee afinar, ya sea E, A, D, G, B o E. \n
+    El modo de oído reproduce el sonido de la cuerda a afinar oprimiendo el botón de esta, solo que ese no muestra las frecuencias, solo reproduce los sonidos de las cuerdas ya afinadas.\n
+    </string>
+    <string name="tunas">Una vez estando en el afinador, se debe presionar el botón de la parte superior derecha de “cambiar de afinaciones”\n\n
+
+    Acto seguido se muestra una lista de distintos tipos de afinación. Finalmente, seleccionamos una de estas afinaciones y la pantalla regresará al afinador, pero con la afinación seleccionada.
+    </string>
+    <string name="create_tuning">Para crear una afinación se debe estar en el apartado donde se encuentra la lista de las afinaciones, y en la parte inferior se podrá visualizar un botón que dice “Crear afinación personalizada”\n
+    Una vez presionado el botón se tendrá una imagen de una guitarra y en las 6 clavijas que representan a cada una de las cuerdas y se nos desplegará una lista de las notas que deseemos que cada cuerda necesite. Se debe de hacer lo mismo con las cuerdas que se desee cambiar de nota. Si la afinación no queda como lo esperado, en el botón de la parte inferior izquierda se puede resetear la afinación. Justo debajo de la imagen de la guitarra se debe de ingresar la frecuencia de la afinación, la cual está marcada con un valor predeterminado de 440hz. Finalmente, cuando nuestra afinación esté terminada se debe oprimir el botón de guardar ubicado en la parte inferior derecha, para ser agregada a la lista de afinaciones, donde podrá ser seleccionada para futuras afinaciones de la guitarra.
+    </string>
+    <string name="dashobaorda">Aquí podemos dirigirnos a alguna de las 13 herramientas de la aplicación, las cuales son: Ejercicios, Entrenador de Bends, Metrónomo, Sesión grupal, Entrenador de Oído, Detective de Ritmo, Rhythm Looper, Biblioteca de Acordes, Progreso, Notificaciones, Clasificados, Sin Clasificar y Reporte de Errores.
+    </string>
+    <string name="bend_trainer">Aquí se cuenta con la herramienta de metrónomo y una gráfica en pantalla que va analizando las notas que entran por el micrófono y las grafica\n\n
+
+    Mediante una lista desplegable se puede escoger qué tanto va a cambiar la nota que se espera tocar, es decir si se escoge un bend de 1 tono, se tendrá que elevar la frecuencia de la nota estirando la cuerda 2 semitonos.\n
+    Mientras se realiza el bend, esta herramienta mediante una imagen que se desplaza de derecha a izquierda indicando en la gráfica si tienes que estirar más la cuerda o aflojar.\n
+    </string>
+    <string name="metronoam">En este apartado se reproducen sonidos a unos pulsos por minuto. Para modificar los pulsos por minuto se debe seleccionar un numero entre 1 y 500, que indica pulsos por minuto que se ingresaran mediante un texto en la pantalla, es decir si ingresa el número 100 y se presiona el botón de iniciar, este se reproducirá 100 veces el sonido en el plazo de un minuto, con tiempo equidistante entre cada sonido. \n\n
+
+    Justo debajo, se observa una fracción por defecto de 4/4, la cual indica el compás con el que el sonido será reproducido. De no querer el predeterminado al presionar el compás se desplegará una lista con otras 6 opciones diferentes de compas donde se podrá seleccionar la preferida.\n\n
+
+    Finalmente, se cuenta con el botón de reproducir que permite reproducir los sonidos del metrónomo con los valores previamente configurados.
+    </string>
+    <string name="group_session">Se muestran 3 opciones, una para crear una sesión, otra para unirse a una sesión y una para salir de la sesión. \n
+    Además, en la parte inferior cuenta con 3 botones, uno para compartir el metrónomo, otro para compartir la afinación y otro para compartir un audio del teléfono.
+    </string>
+    <string name="hostings">Antes de iniciar la sesión, la app debe comprobar que el dispositivo esté conectado a una red wifi.\n
+    Una vez dentro de una red el botón de unirse a una sesión y crear sesión está deshabilitado mientras estás en una sesión.\n\n
+
+    Solo habrá un administrador de la sesión, dicho administrador puede compartir sus configuraciones, el audio de su metronomo, sus configuraciones, la afinación utilizada y compartir sus grabaciones de audio hasta con 10 dispositivos.
+    </string>
+    <string name="ear_trainer">Se reproduce mínimo 1 sonido aleatorio, al ser más de sonido este tiene que ser distinto uno de otro, cada sonido corresponde a 1 de las 12 notas existentes.\n\n
+
+    Se toma en cuenta 4 notas de opción multiple donde solo se tendra una respuesta correcta, la cual es la nota que debe coincidir con el sonido escuchado.\n\n
+
+    Mientras se avanza en el ejercicio, cada pregunta permitirá repetir el sonido de la nota a encontrar para estar mas seguros de la respuesta seleccionada\n\n
+
+    Al final de la sesión, después de contestar 15 preguntas donde cada 1 representa 1 punto de calificación, siendo el máximo posible de 15 puntos. se guarda la puntuación mostrándola despues de la ultima pregunta
+    </string>
+    <string name="rythdm_detective">Se visualiza en la parte superior un apartado de un metrónomo, en el espacio inferior se encuentran 3 botones, 1 para iniciar la grabación de audio, otro para detener la grabación y el último para reproducir el audio. también cuenta con 2 imágenes emergentes, una con una cruz y otra con una paloma\n\n
+
+    Esta herramienta tiene la opcion de grabar una pieza musical a baja velocidad en formato mp3, para después reproducirla a distintas velocidades (a lo que los permisos de usos de microfono deben estar activados), a medida que se verifica el correcto uso del microfono para que asi pueda reproducirse la grabación  con las nuevas velocidades. \n\n
+
+    Se pueden tocar 4 notas en 4 segundos con una separación de 1 segundo entre cada nota, mantener el ritmo a otra velocidad sería que proporcionalmente haya la misma separación entre todas las notas, por ejemplo 4 notas en 2 segundos, con .5 segundos entre cada nota.
+    </string>
+    <string name="loopers">En la parte superior se cuenta con un recuadro donde se inserta el enlaze de YouTube del video.\n\n
+
+    Debajo del video se tienen 2 marcadores (marcador de inicio y marcador de fin), y entre estos se repetira el extracto de video seleccionado.\n\n
+
+    Debajo de los marcadores se puede ingresar manualmente en segundos el tiempo de inicio y el tiempo de fin de dicho bucle.\n\n
+
+    FInalmente, se cuenta con un marcador que nos permitirá modificar la velocidad del video, tomando la mas lenta con .25s y la mas rapida con 2s.\n\n
+
+    Finalmente presionamos el botón de "Loop" y listo, tendremos nuestra reproduccion en bucle \n\n
+    </string>
+    <string name="chord_librariu">El objetivo es encontrar el nombre de la nota o el acorde que se desee de cualquier nota.\n\n
+
+    Primero seleccionamos la nota fundamental del acorde que queremos encontrar, y justo debajo se selecciona el tipo de acorde (que viene siendo la variación del mismo) como lo son acordes mayores, menores, séptimas y quintas\n\n
+
+    Al presionar el botón de buscar acordes, se actualizará la pantalla y se mostrará la imagen del acorde, y solo se guardará la imagen de la figura básica.\n\n
+
+    Finalmente se mostrará en pantalla en que traste comenzará la figura.\n\n
+    </string>
+    <string name="progoras">La grafica mostrada indica el avance / progreso que se ha registrado hasta el día de hoy.\n\n
+
+    Si el plan de usuario es estándar, el progreso seguirá graficandose hasta el paso de 30 dias. En cambio, si el usuario es PRO este registro no se borrará y se podra conservar dicho progreso por mas tiempo \n\n
+
+    Además de que el usuario PRO, se cuenta con un cuadro de búsqueda donde se puede ingresar el nombre de otros usuarios para ver su progreso
+    </string>
+    <string name="notifiaca">Para acceder a las notificaciones debemos encontrarnos en el apartado de configuración. Una vez ahí, en la parte superior se encuentra un texto que dice notificaciones.\n
+    Se podrán configurar 4 valores:\n
+    El primero y el tercero son dos opciones de encendido y apagado acerca si se desea activar las notificaciones de el recordatorio de prácticas y de el recordatorio de postura respectivamente.\n
+    Y el segundo y el cuarto permite modificar el tiempo de notificación, la cual es la frecuencia con la que seremos notificados. \n
+    </string>
+    <string name="ranked">En este módulo se muestra la lista de grabaciones, mostrando el título de la grabación, la puntuación en estrellas y la cantidad de notas. Para que una grabacion pueda entrar a este apartado, deben tener 10 votos y una puntuacion de 3.5 estrellas como mínimo. Se cuenta con un botón que permite hacer una grabación y ademas cuenta con un buscador que busca entre los títulos de las grabaciones. Cuando se da clic a alguna de las puntuaciones se manda a el apartado de challenge</string>
+    <string name="unranked">En este módulo se muestra la lista de grabaciones, mostrando el título de la grabación, la puntuación en estrellas y la cantidad de notas. Pero en diferencia con las grabaciones clasificadas, estas cuentan con menos de 10 votos y con una puntuacion menor a 3.5 estrellas. También cuenta con un buscador que busca entre los títulos de las grabaciones.</string>
+    <string name="bug_report">El reporte de errores tiene como funcion notificar al soporte de apoyo algun error o desperfecto de la aplicaciòn\n\n
+
+    Se cuentan con 4 campos que deben ser llenados previo a enviar el reporte de errores\n\n
+
+    1) Titulo del error\n
+    2) Numero de veces que ocurrio el error\n
+    3) Pasos para repetir el problema\n
+    4) Descripcion detallada del problema\n\n
+
+    Una vez esten llenos, se hace clic en el boton de "enviar reporte" y este llega al correo de soporte de la aplicacion.
+    </string>
+    <string name="setifnas">En este apartado en la parte superior de se puede configurar las notificaciones con respecto al uso de la aplicación.\n
+    Después, se cuenta con un texto que dice afinador, en esta parte se puede modificar la afinación estándar al momento de utilizar el afinador, la cual por defecto es E Estándar. En caso de que no sea la de nuestro agrado, simplemente se presiona la afinación que es E Estándar y se desplegará una lista con más afinaciones. Se selecciona la opción de nuestra preferencia y se queda registrada como la afinación predeterminada.\n
+    Debajo de la afinación predeterminada se tiene la opción de modificar la sensibilidad del micrófono, que es una barra de desplazamiento, que al moverla al lado izquierdo se baja la sensibilidad del micrófono, y al moverla al lado derecho se aumenta.\n
+    Después, se tiene la opción de modificar la ganancia del micrófono con la misma barra de desplazamiento moviéndola a la izquierda para disminuirla y a la derecha para aumentarla.\n
+    Mas abajo se cuenta con la opción de lenguaje, donde al presionar el lenguaje que se tiene aparecerá la opción de seleccionar entre español e inglés.\n
+    Finalmente, debajo del todo se tiene la configuración de la cuenta, donde se puede seleccionar en la opción de convertirse en usuario PRO en caso de no serlo, la opción para cerrar sesión y finalmente la opción de iniciar sesión, que únicamente estará habilitada si la sesión del usuario no ha sido iniciada.\n
+    </string>
+    <string name="paymony">Para acceder a este apartado debemos de ingresar a configuración hasta la parte inferior. Ahí, se encontrará un apartado que dice “CONVERTIRSE EN PRO!”. Al hacer clic ahí se redirecciona a GPAY para convertirse en usuario PRO. Se sincroniza la información de la tarjeta con Google Play insertando todos los datos, y después de eso una vez validada la información el usuario pasa de ser usuario estándar a usuario PRO.
+    </string>
+    <string name="main">En la aplicación se cuenta con una barra de navegación en la parte inferior con 3 diferentes opciones que pueden seleccionarse. \n
+    En la parte izquierda y la que se abre por defecto encontramos el afinador, donde se puede acceder mediante este a la lista de afinaciones y a la creación de una afinación\n
+    En el centro tenemos el panel, donde podemos dirigirnos a alguna de las 13 herramientas de la aplicación, las cuales son: Ejercicios, Entrenador de Bends, Metrónomo, Sesión grupal, Entrenador de Oído, Detective de Ritmo, Rhythm Looper, Biblioteca de Acordes, Progreso, Notificaciones, Clasificados, Sin Clasificar y Reporte de Errores.\n
+    Finalmente, del lado derecho tenemos acceso al apartado de configuración, donde podremos establecer los valores de nuestra preferencia al momento de configurar la aplicación, donde se tienen las notificaciones, la afinación por defecto, la ganancia del micrófono, el lenguaje, la cuenta y la opción para cerrar e iniciar sesión.\n
+    </string>
+    <string name="no_internet_info">Necesitas conexión a internet para usar este modulo</string>
+    <string name="pro_user_error_info">Este modulo requiere ser usuario PRO, por favor considera comprar el estado PRO</string>
+    <string name="success_bug_report">Reportado exitosamente, gracias por el reporte</string>
+    <string name="listo">Listo</string>
+    <string name="permission_required_x">Este modulo no puede funcionar sin el permiso:&#160;</string>
+    <string name="stop">Detener</string>
+    <string name="loudness_captured_by_the_mic">Volumen capturado por el microfono</string>
+    <string name="historic_average_score">"Historic Average Score: "</string>
+    <string name="main_page">Pagina principal</string>
+    <string name="afinaciones">Afinaciones</string>
+    <string name="buy_pro">Comprar cuenta pro</string>
+    <string name="ok">OK</string>
+    <string name="iniciar_analisis">Iniciar Analisis</string>
+    <string name="de_velocidad">% de Velocidad:</string>
+    <string name="precision_ms">Precisión +-mS:</string>
+    <string name="empty_field">El campo no puede estar vacio</string>
+    <string name="precision_range_error">El campo de precision solo puede ser mayor a 10ms y menor a 100ms</string>
+    <string name="velocity_range_error">La velocidad no puede ser menor al 100% ni mayor al 500%</string>
+    <string name="exercises_invalid_bpm_error">El valor de los pulsos por minuto no puede ser mayor a 300 ni menor a 30</string>
+    <string name="low_score_info">Debes sacar al menos 70% de calificacion para avanzar al proximo ejercicio</string>
+    <string name="secuencia">Secuencia:</string>
+    <string-array name="exercises">
+        <item>Araña</item>
+        <item>Sweep</item>
+        <item>Arpeggios</item>
+        <item>Bends</item>
+        <item>Escalas</item>
+    </string-array>
+    <string name="type_in_your_daily_practice_goal">Escribe tu meta diaria de practica.</string>
+    <string name="ingresa_el_titulo_de_la_afinaci_n">Ingresa el titulo de la afinación</string>
+    <string name="es_necesaria_una_conexion_a_internet_para_guardar_la_afinacion">Es necesaria una conexion a internet para guardar la afinacion</string>
+    <string name="guardar_afinacion">Guardar Afinacion</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="title_length_cant_be_less_than_5_characters">Titulo no puede contener menos de 5 caracteres</string>
+    <string name="description_length_cant_be_less_than_5_characters">Descripcion no puede contener menos de 5 caracteres</string>
+    <string name="tienes_que_escuchar_completa_la_grabaci_n_antes_de_puntuarla">Tienes que escuchar completa la grabación antes de puntuarla</string>
+    <string name="deteniendo">Deteniendo</string>
+    <string name="la_afinacion_de_la_cuerda_no_puede_ser_mas_de_3_tonos_por_arriba_de_la_afinacion_estandar">La afinacion de la cuerda no puede ser mas de 3 tonos por arriba de la afinacion estandar</string>
+    <string name="el_titulo_no_puede_estar_vac_o">El titulo no puede estar vacío</string>
+    <string name="working_with_local_tuning_file">Usando afinaciones locales</string>
+    <string name="tuning_not_deleted_from_cloud_storage">Afinacion no borrada del almacenamiento en la nube</string>
+    <string name="headphones_info">Se necesitan audifonos para que el sonido del dispositivo no interfiera con la grabación</string>
+    <string name="cargando">Cargando</string>
+    <string name="error_existing_email">Email ya registrado</string>
+    <string name="invalid_token_or_email">Email o token invalido</string>
+    <string name="outdated_token">Token Caducado</string>
+</resources>

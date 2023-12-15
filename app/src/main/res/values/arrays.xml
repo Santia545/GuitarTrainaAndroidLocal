@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="time_signatures">
+        <item>4/4</item>
+        <item>2/4</item>
+        <item>3/4</item>
+        <item>2/2</item>
+        <item>6/8</item>
+        <item>9/8</item>
+        <item>12/8</item>
+    </string-array>
+    <string-array name="bends_list">
+        <item>¼</item>
+        <item>½</item>
+        <item>¾</item>
+        <item>1</item>
+        <item>1¼</item>
+        <item>1½</item>
+        <item>1¾</item>
+        <item>2</item>
+        <item>2¼</item>
+        <item>2½</item>
+        <item>2¾</item>
+        <item>3</item>
+    </string-array>
+</resources>
