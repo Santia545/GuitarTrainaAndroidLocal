@@ -7,7 +7,6 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.InputType;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -17,19 +16,19 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.android.volley.VolleyError;
 import com.example.guitartraina.R;
-import com.example.guitartraina.api.IResult;
-import com.example.guitartraina.api.VolleyService;
 import com.example.guitartraina.util.DialogInfo;
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 
-import java.nio.charset.StandardCharsets;
+import java.lang.reflect.Type;
 import java.util.Arrays;
+import java.util.List;
+import java.util.Random;
 
 public class TuningCreationActivity extends AppCompatActivity {
     private final double[] frequencies = new double[7];
@@ -37,10 +36,9 @@ public class TuningCreationActivity extends AppCompatActivity {
     private String[] allNotes = new String[]{};
     private EditText referenceNote;
     private Spinner[] strings;
-    private VolleyService volleyService;
+    private List<Tuning> tunings;
     private SharedPreferences archivo;
 
-    private IResult resultCallback = null;
     private int[] standarTuningPosition;
     private final double[] STANDAR_TUNING_FREQ = new double[]{82.41, 110.00, 146.83, 196.00, 246.94, 329.63, 440};
 
@@ -48,9 +46,7 @@ public class TuningCreationActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tuning_creation);
-        archivo=getEncryptedSharedPreferences(this);
-        initVolleyCallback();
-        volleyService = new VolleyService(resultCallback, this);
+        archivo = getEncryptedSharedPreferences(this);
         strings = new Spinner[6];
         standarTuningPosition = new int[]{28, 33, 38, 43, 47, 52};
         strings[5] = findViewById(R.id.spinner);
@@ -97,7 +93,7 @@ public class TuningCreationActivity extends AppCompatActivity {
                 @Override
                 public void onItemSelected(AdapterView<?> adapterView, View view, int itemPosition, long l) {
                     noteNames[finalI] = adapterView.getItemAtPosition(itemPosition).toString().replaceAll("\\d", "");
-                    if (itemPosition  > standarTuningPosition[finalI]+6) {
+                    if (itemPosition > standarTuningPosition[finalI] + 6) {
                         DialogInfo.dialogInfoBuilder(TuningCreationActivity.this, "", getString(R.string.la_afinacion_de_la_cuerda_no_puede_ser_mas_de_3_tonos_por_arriba_de_la_afinacion_estandar)).show();
                         strings[finalI].setSelection(standarTuningPosition[finalI]);
                     }
@@ -128,6 +124,7 @@ public class TuningCreationActivity extends AppCompatActivity {
             }
         });
     }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.toolbar_menu, menu);
@@ -146,6 +143,7 @@ public class TuningCreationActivity extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
+
     private double getCentsOff(double pitchInHz, double expectedFrequency) {
         //Math.log(2.0) = 0.6931471805599453;
         //12*100
@@ -173,15 +171,24 @@ public class TuningCreationActivity extends AppCompatActivity {
                 .setTitle(getString(R.string.ingresa_el_titulo_de_la_afinaci_n))
                 .setMessage(getString(R.string.es_necesaria_una_conexion_a_internet_para_guardar_la_afinacion))
                 .setView(input)
+
                 .setPositiveButton(getString(R.string.guardar_afinacion), (dialogInterface, i) -> {
                     String title = input.getText().toString();
                     if (title.equals("")) {
                         DialogInfo.dialogInfoBuilder(this, "", getString(R.string.el_titulo_no_puede_estar_vac_o)).show();
                         return;
                     }
-                    String url = "/Tunings?title=" + title + "&frequencies=" + getFormattedStrings() + "&email="+getCurrentUser();
-                    volleyService.postStringDataVolley(url);
-                    dialogInterface.dismiss();
+                    String jsonArrayLocalTunings = archivo.getString("custom_tunings", "[]");
+                    Type type = new TypeToken<List<Tuning>>() {
+                    }.getType();
+                    tunings = new Gson().fromJson(jsonArrayLocalTunings, type);
+                    Tuning tuning= new Tuning();
+                    tuning.setId(new Random().nextInt(Integer.MAX_VALUE));
+                    tuning.setTitle(title);
+                    tuning.setStrings(getFormattedStrings());
+                    tunings.add(tuning);
+                    saveTuningsInLocalPreferences(new Gson().toJson(tunings));
+                    finish();
                 })
                 .setNegativeButton(getString(R.string.cancelar), (dialog1, which) -> dialog1.cancel())
                 .setOnCancelListener(DialogInterface::cancel)
@@ -197,42 +204,7 @@ public class TuningCreationActivity extends AppCompatActivity {
         for (int i = 0; i < length; i++) {
             formattedStrings[i] = noteNames[i] + " " + frequencies[i];
         }
-        return Arrays.toString(formattedStrings).replace("#", "%23");
-        //return ;
-    }
-
-    private String getCurrentUser() {
-        return archivo.getString("email", "");
-    }
-
-    private void initVolleyCallback() {
-        resultCallback = new IResult() {
-            @Override
-            public void notifySuccess(String requestType, Object response) {
-                Log.d("notifySuccess", "Volley requester " + requestType);
-                Log.d("notifySuccess", "Volley JSON post" + response);
-                finish();
-            }
-
-            @Override
-            public void notifyError(String requestType, VolleyError error) {
-                error.printStackTrace();
-                String body = "";
-                String errorCode = "";
-                if (error.networkResponse != null) {
-                    body = new String(error.networkResponse.data, StandardCharsets.UTF_8);
-                    errorCode = "" + error.networkResponse.statusCode;
-                }
-                Toast.makeText(TuningCreationActivity.this, "failed: " + body + " " + errorCode, Toast.LENGTH_LONG).show();
-                Log.d("notifyError", "Volley requester " + requestType);
-                Log.d("notifyError", "Volley JSON post" + "That didn't work!" + error + " " + errorCode);
-                Log.d("notifyError", "Error: " + error
-                        + "\nStatus Code " + errorCode
-                        + "\nResponse Data " + body
-                        + "\nCause " + error.getCause()
-                        + "\nmessage " + error.getMessage());
-            }
-        };
+        return Arrays.toString(formattedStrings).replace("#", "");
     }
 
     private void recalculateTuning() {
@@ -270,5 +242,11 @@ public class TuningCreationActivity extends AppCompatActivity {
                 k++;
             }
         }
+    }
+
+    private void saveTuningsInLocalPreferences(String response) {
+        SharedPreferences.Editor editor = archivo.edit();
+        editor.putString("custom_tunings", response);
+        editor.apply();
     }
 }
