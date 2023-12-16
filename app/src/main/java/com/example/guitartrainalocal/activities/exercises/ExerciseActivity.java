@@ -123,6 +123,8 @@ public class ExerciseActivity extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
+        handler.removeCallbacksAndMessages(null);
+
         if (countdown != null) {
             countdown.stopCountdown();
         }
