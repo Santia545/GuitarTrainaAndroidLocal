@@ -8,7 +8,7 @@
     tools:context=".activities.metronome.MetronomeActivity">
   <fragment
       android:id="@+id/fragment_activity_metronome"
-      android:name="com.example.guitartraina.ui.metronome.MetronomeFragment"
+      android:name="com.example.guitartrainalocal.ui.metronome.MetronomeFragment"
       android:layout_width="0dp"
       android:layout_height="0dp"
       app:layout_constraintBottom_toBottomOf="parent"

@@ -17,7 +17,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <com.example.guitartraina.ui.views.GuitarTabView
+    <com.example.guitartrainalocal.ui.views.GuitarTabView
         android:layout_marginTop="50dp"
         android:id="@+id/guitarTabView"
         android:layout_width="match_parent"

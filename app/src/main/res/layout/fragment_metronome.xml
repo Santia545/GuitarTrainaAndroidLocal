@@ -89,7 +89,7 @@
         app:layout_constraintGuide_percent="0.66" />
 
 
-    <com.example.guitartraina.ui.views.MetronomeView
+    <com.example.guitartrainalocal.ui.views.MetronomeView
         android:id="@+id/metronomeView"
         android:layout_width="match_parent"
         android:layout_height="0dp"

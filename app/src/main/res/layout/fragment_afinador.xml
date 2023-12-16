@@ -70,7 +70,7 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-        <com.example.guitartraina.ui.views.GuitarTunerView
+        <com.example.guitartrainalocal.ui.views.GuitarTunerView
             android:id="@+id/guitar_tuner"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />

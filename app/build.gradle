@@ -1,13 +1,12 @@
 plugins {
     id 'com.android.application'
-    id 'com.google.gms.google-services'
 }
 
 android {
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.example.guitartraina"
+        applicationId "com.example.guitartrainalocal"
         minSdk 21
         targetSdk 33
         versionCode 1

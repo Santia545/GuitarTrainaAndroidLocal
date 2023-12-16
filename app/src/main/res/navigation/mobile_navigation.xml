@@ -6,19 +6,19 @@
 
     <fragment
         android:id="@+id/navigation_afinador"
-        android:name="com.example.guitartraina.ui.tuner.TunerFragment"
+        android:name="com.example.guitartrainalocal.ui.tuner.TunerFragment"
         android:label="@string/title_home"
         tools:layout="@layout/fragment_afinador" />
 
     <fragment
         android:id="@+id/navigation_dashboard"
-        android:name="com.example.guitartraina.ui.dashboard.DashboardFragment"
+        android:name="com.example.guitartrainalocal.ui.dashboard.DashboardFragment"
         android:label="@string/title_dashboard"
         tools:layout="@layout/fragment_dashboard" />
 
     <fragment
         android:id="@+id/navigation_configuration"
-        android:name="com.example.guitartraina.ui.configuration.ConfigurationFragment"
+        android:name="com.example.guitartrainalocal.ui.configuration.ConfigurationFragment"
         android:label="@string/configuracion"
         />
 </navigation>
