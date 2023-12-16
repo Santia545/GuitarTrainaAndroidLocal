@@ -29,10 +29,6 @@
         android:icon="@drawable/diagrama_de_acordes"
         android:title="@string/chord_library" />
     <item
-        android:id="@+id/navigation_progreso"
-        android:icon="@drawable/ic_baseline_bar_chart_24"
-        android:title="@string/progreso" />
-    <item
         android:id="@+id/notifications"
         android:icon="@drawable/baseline_notifications_24"
         android:title="@string/notifications" />

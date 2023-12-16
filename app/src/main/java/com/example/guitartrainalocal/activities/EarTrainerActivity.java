@@ -157,12 +157,6 @@ public class EarTrainerActivity extends AppCompatActivity {
         double score = ((double) rightAnswers / 15.) * 100;
         AlertDialog dialog = dialogBuilder(score);
         dialog.show();
-        dialog.getButton(AlertDialog.BUTTON_NEUTRAL).setOnClickListener((View v) -> {
-            Intent progress = new Intent(EarTrainerActivity.this,ProgressActivity.class);
-            progress.putExtra("module",1);
-            startActivity(progress);
-        });
-
         if (swAutoDifficulty.isChecked()) {
             checkScore(score);
         }
@@ -241,7 +235,6 @@ public class EarTrainerActivity extends AppCompatActivity {
                     recreate();
                     dialogInterface.dismiss();
                 })
-                .setNeutralButton(getString(R.string.progreso), null)
                 .setNegativeButton(getString(R.string.salir), (dialog1, which) -> dialog1.cancel())
                 .setOnCancelListener(dialogInterface ->
                         finish()

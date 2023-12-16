@@ -21,7 +21,6 @@ import com.example.guitartrainalocal.activities.ChordLibraryActivity;
 import com.example.guitartrainalocal.activities.EarTrainerActivity;
 import com.example.guitartrainalocal.activities.LooperActivity;
 import com.example.guitartrainalocal.activities.NotificationsActivity;
-import com.example.guitartrainalocal.activities.ProgressActivity;
 import com.example.guitartrainalocal.activities.bendtrainer.BendTrainerActivity;
 import com.example.guitartrainalocal.activities.exercises.ExercisesActivity;
 import com.example.guitartrainalocal.activities.metronome.MetronomeActivity;
@@ -74,9 +73,6 @@ public class DashboardFragment extends Fragment {
             } else if (itemId == R.id.navigation_chord_library) {
                 Intent chordLibrary = new Intent(requireContext(), ChordLibraryActivity.class);
                 startActivity(chordLibrary);
-            } else if (itemId == R.id.navigation_progreso) {
-                Intent progress = new Intent(requireContext(), ProgressActivity.class);
-                startActivity(progress);
             } else if (itemId == R.id.notifications) {
                 Intent notifs = new Intent(requireContext(), NotificationsActivity.class);
                 startActivity(notifs);

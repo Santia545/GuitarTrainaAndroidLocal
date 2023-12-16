@@ -36,11 +36,6 @@
             android:exported="false"
             android:parentActivityName="com.example.guitartrainalocal.activities.MainActivity" />
         <!--Need to remove volley, store progress on shared preferences -->
-        <activity
-            android:name="com.example.guitartrainalocal.activities.ProgressActivity"
-            android:configChanges="orientation|keyboardHidden"
-            android:exported="false"
-            android:screenOrientation="portrait" />
 
         <activity
             android:name="com.example.guitartrainalocal.activities.EarTrainerActivity"
