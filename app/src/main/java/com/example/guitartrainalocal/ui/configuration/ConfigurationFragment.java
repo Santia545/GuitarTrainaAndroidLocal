@@ -239,8 +239,8 @@ public class ConfigurationFragment extends PreferenceFragmentCompat {
 
     private int getSecondsPracticed() {
         Date date = new Date();
-        Calendar calendar = GregorianCalendar.getInstance(); // creates a new calendar instance
-        calendar.setTime(date);   // assigns calendar to given date
+        Calendar calendar = GregorianCalendar.getInstance();
+        calendar.setTime(date);
         int currentDay = calendar.get(Calendar.DAY_OF_YEAR);
         int lastPractice = archivo.getInt("practiceDay", currentDay);
         if (currentDay != lastPractice) {

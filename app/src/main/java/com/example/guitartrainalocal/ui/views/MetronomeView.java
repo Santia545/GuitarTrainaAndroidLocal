@@ -59,14 +59,10 @@ public class MetronomeView extends View {
     private void init() {
         paintCircles = new Paint();
         paintText = new Paint();
-        // Get the current theme of the activity
         Resources.Theme currentTheme = getContext().getTheme();
-        // Create a new TypedValue object to hold the color value
         TypedValue typedValue = new TypedValue();
 
-        // Retrieve the color value of the text color attribute from the current theme
         currentTheme.resolveAttribute(android.R.attr.textColor, typedValue, true);
-        // Get the color value as an integer
         int textColor = typedValue.data;
         paintText.setColor(textColor);
         paintText.setTextAlign(Paint.Align.CENTER);

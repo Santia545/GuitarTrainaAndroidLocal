@@ -9,7 +9,6 @@ import android.media.AudioTrack;
 import android.os.Bundle;
 import android.text.InputFilter;
 import android.text.InputType;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -22,15 +21,11 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SwitchCompat;
 
-import com.android.volley.VolleyError;
 import com.example.guitartrainalocal.R;
 import com.example.guitartrainalocal.activities.tuner.YoutubePlayerActivity;
-import com.example.guitartrainalocal.api.IResult;
-import com.example.guitartrainalocal.api.VolleyService;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.io.InputStream;
-import java.nio.charset.StandardCharsets;
 import java.util.Arrays;
 import java.util.Locale;
 import java.util.Random;
@@ -53,19 +48,14 @@ public class EarTrainerActivity extends AppCompatActivity {
     private int counter = 1;
     private int rightAnswers = 0;
     private int wrongAnswers = 0;
-    private IResult resultCallback = null;
-    private VolleyService volleyService;
     private SharedPreferences archivo;
     private int difficulty;
-    private Double averageScore;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ear_trainer);
-        initVolleyCallback();
         archivo=getEncryptedSharedPreferences(this);
-        volleyService = new VolleyService(resultCallback, this);
         swAutoDifficulty = findViewById(R.id.switch1);
         tilesNotes = getResources().getStringArray(R.array.piano_notes);
         repeatSound = findViewById(R.id.repeat);
@@ -112,7 +102,6 @@ public class EarTrainerActivity extends AppCompatActivity {
                 dialogBuilder3().show();
             }
         });
-        volleyService.getStringDataVolley("/Scores/average?email=" + "&module=1");
     }
 
     @Override
@@ -166,7 +155,6 @@ public class EarTrainerActivity extends AppCompatActivity {
 
     private void endProcess() {
         double score = ((double) rightAnswers / 15.) * 100;
-        saveProgress(score);
         AlertDialog dialog = dialogBuilder(score);
         dialog.show();
         dialog.getButton(AlertDialog.BUTTON_NEUTRAL).setOnClickListener((View v) -> {
@@ -246,9 +234,6 @@ public class EarTrainerActivity extends AppCompatActivity {
 
     private AlertDialog dialogBuilder(double score) {
         String message=getString(R.string.puntuacion) + String.format(Locale.getDefault(), "%.2f", score) + getString(R.string.aciertos) + rightAnswers + getString(R.string.fallos) + wrongAnswers;
-        if(averageScore !=null) {
-            message+="\n"+getString(R.string.historic_average_score)+ String.format(Locale.getDefault(), " %.2f",averageScore) ;
-        }
         return new AlertDialog.Builder(this)
                 .setTitle(getString(R.string.sesion_finalizada))
                 .setMessage(message)
@@ -264,10 +249,7 @@ public class EarTrainerActivity extends AppCompatActivity {
                 .create();
     }
 
-    private void saveProgress(double score) {
-        String url = "/Scores?module=1&score=" + score + "&difficulty=" + difficulty + "&email=" ;
-        volleyService.postStringDataVolley(url);
-    }
+
 
 
     private void nextQuestion() {
@@ -317,13 +299,11 @@ public class EarTrainerActivity extends AppCompatActivity {
         for (int i = 0; i < 4; i++) {
             if (i == randomOption) {
                 options[i].setOnClickListener(right);
-                //options[i].setBackgroundColor(Color.GREEN);
                 String opc = randomArrayToNoteString(randomNumbersMatrix[0]);
                 options[i].setText(String.format("%s", opc));
             } else {
                 options[i].setOnClickListener(wrong);
                 String opc = randomArrayToNoteString(randomNumbersMatrix[counter]);
-                //options[i].setBackgroundColor(Color.RED);
                 options[i].setText(String.format("%s", opc));
                 counter++;
             }
@@ -392,48 +372,6 @@ public class EarTrainerActivity extends AppCompatActivity {
         }
         return randomNumbersArray;
     }
-
-    void initVolleyCallback() {
-        resultCallback = new IResult() {
-            @Override
-            public void notifySuccess(String requestType, Object response) {
-                Log.d("notifySuccess", "Volley requester " + requestType);
-                Log.d("notifySuccess", "Volley JSON post" + response);
-                if (requestType.equals("GET")) {
-                    averageScore = Double.parseDouble((String) response);
-                }
-            }
-
-            @Override
-            public void notifyError(String requestType, VolleyError error) {
-                error.printStackTrace();
-                String body = "";
-                String errorCode = "";
-                try {
-                    errorCode = "" + error.networkResponse.statusCode;
-                    body = new String(error.networkResponse.data, StandardCharsets.UTF_8);
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-                String cause = "";
-                if (error.getCause() != null) {
-                    cause = error.getCause().getMessage();
-                }
-                Toast.makeText(EarTrainerActivity.this, getString(R.string.fallido) + cause + " " + body + " ", Toast.LENGTH_LONG).show();
-                Log.d("notifyError", "Volley requester " + requestType);
-                Log.d("notifyError", "Volley JSON post" + "That didn't work!" + error + " " + errorCode);
-                Log.d("notifyError", "Error: " + error
-                        + "\nStatus Code " + errorCode
-                        + "\nResponse Data " + body
-                        + "\nCause " + error.getCause()
-                        + "\nmessage " + error.getMessage());
-                if (requestType.equals("GET")) {
-                    averageScore = null;
-                }
-            }
-        };
-    }
-
 
     private void setManualDifficulty() {
         SharedPreferences.Editor editor = archivo.edit();

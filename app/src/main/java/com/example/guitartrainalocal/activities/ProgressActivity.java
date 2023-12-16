@@ -52,7 +52,7 @@ public class ProgressActivity extends AppCompatActivity {
     private Spinner spinModule;
     private Button btnNextMonth, btnPreviousMonth;
     private TextView tvMonth;
-    private int textColor; // Get the color from resources
+    private int textColor;
     private SharedPreferences archivo;
     private VolleyService volleyService;
     private int month = 1;
@@ -68,13 +68,9 @@ public class ProgressActivity extends AppCompatActivity {
         initVolleyCallback();
         volleyService = new VolleyService(resultCallback, this);
 
-        // Get the current theme of the activity
         Resources.Theme currentTheme = ProgressActivity.this.getTheme();
-        // Create a new TypedValue object to hold the color value
         TypedValue typedValue = new TypedValue();
-        // Retrieve the color value of the text color attribute from the current theme
         currentTheme.resolveAttribute(android.R.attr.textColor, typedValue, true);
-        // Get the color value as an integer
         textColor = typedValue.data;
         tvMonth = findViewById(R.id.month_tv);
         btnPreviousMonth = findViewById(R.id.ant_mes_button);
@@ -209,7 +205,6 @@ public class ProgressActivity extends AppCompatActivity {
         yLAxis.setTextSize(15f);
         YAxis yRAxis = chart.getAxisRight();
         yRAxis.setEnabled(false);
-        // Customize the x-axis labels
         XAxis xAxis = chart.getXAxis();
         xAxis.setPosition(XAxis.XAxisPosition.BOTTOM);
         xAxis.setLabelCount(25);
@@ -241,11 +236,9 @@ public class ProgressActivity extends AppCompatActivity {
         chart.setData(barData);
         chart.getXAxis().setValueFormatter(new IndexAxisValueFormatter(labels));
 
-        // Set the initial zoom level
         float visibleRange = 5f; // Set the number of visible bars on the chart
         chart.setVisibleXRangeMaximum(visibleRange);
         chart.invalidate();
-        // Add a click listener to the chart bars
         chart.setOnChartValueSelectedListener(new OnChartValueSelectedListener() {
             @Override
             public void onValueSelected(Entry e, Highlight h) {
@@ -258,13 +251,11 @@ public class ProgressActivity extends AppCompatActivity {
 
             @Override
             public void onNothingSelected() {
-                // Handle when no bar is selected
             }
         });
     }
 
 
-    // Example class representing date and value pair
     private static class DateValue {
         private final String date;
         private final float averageScore;

@@ -49,13 +49,9 @@ public class FrequencyView extends View {
         paintGraph.setTextAlign(Paint.Align.CENTER);
         paintGraph.setTextSize(TEXT_SIZE * 2);
         centsTrail = new ArrayList<>();
-        // Get the current theme of the activity
         Resources.Theme currentTheme = getContext().getTheme();
-        // Create a new TypedValue object to hold the color value
         TypedValue typedValue = new TypedValue();
-        // Retrieve the color value of the text color attribute from the current theme
         currentTheme.resolveAttribute(android.R.attr.textColor, typedValue, true);
-        // Get the color value as an integer
         int textColor = typedValue.data;
         paintText.setColor(textColor);
         paintText.setTextSize(TEXT_SIZE);
@@ -64,7 +60,7 @@ public class FrequencyView extends View {
     }
     public void lowerTrailPoints() {
         centsTrail.add(null);
-        invalidate(); // Redraw the view
+        invalidate();
     }
 
     @Override
@@ -76,13 +72,10 @@ public class FrequencyView extends View {
             canvas.drawText(getContext().getString(R.string.target_note), centerX, centerY-10 - TEXT_SIZE*2, paintText);
             canvas.drawText(note + " + " + centsDiff/100 +" " +getContext().getString(R.string.semitones), centerX, centerY - TEXT_SIZE, paintText);
         }
-        // Add the current cents value to the trail
         centsTrail.add(cents);
-        // Remove old trail points
         while (centsTrail.size() > TRAIL_SIZE) {
             centsTrail.remove(0);
         }
-        // Draw the trail points
         int trailSize = centsTrail.size();
         for (int i = 0; i < trailSize; i++) {
             Double trailCents = centsTrail.get(i);
@@ -92,9 +85,7 @@ public class FrequencyView extends View {
             float trailPosition = map(centerX, trailCents);
             int trailColorIndex = getCentsColor(trailCents);
             paintGraph.setColor(NOTE_COLORS[trailColorIndex]);
-            // Calculate the Y-coordinate for each trail point
             float trailY = centerY + TEXT_SIZE + ((trailSize - i) * (TEXT_SIZE / 8f));
-            // Draw the most recent indicator as an "L"
             if (i == trailSize - 1) {
                 float graphPosition = map(centerX, cents);
                 int colorIndex = getCentsColor(cents);
@@ -102,7 +93,6 @@ public class FrequencyView extends View {
                 canvas.drawText("|", graphPosition, centerY + TEXT_SIZE, paintGraph);
                 canvas.drawText(String.format(Locale.getDefault(), "%.2f cents", cents), centerX, centerY + 80 + TEXT_SIZE, paintText);
             } else {
-                // Draw other trail points as small circles or points
                 canvas.drawCircle(trailPosition, trailY, 5, paintGraph);
             }
         }

@@ -160,7 +160,6 @@ public class BendTrainer {
             }
         }
 
-        // Check the closest values in the remaining two adjacent elements
         if (left > 0 && Math.abs(array[left - 1] - target) < Math.abs(array[left] - target)) {
             return left - 1;
         } else {

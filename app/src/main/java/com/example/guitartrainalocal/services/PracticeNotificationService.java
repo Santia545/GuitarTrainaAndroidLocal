@@ -56,8 +56,8 @@ public class PracticeNotificationService extends Service {
         createNotificationChannel();
         runnable = ()->{
             Date date = new Date();
-            Calendar calendar = GregorianCalendar.getInstance(); // creates a new calendar instance
-            calendar.setTime(date);   // assigns calendar to given date
+            Calendar calendar = GregorianCalendar.getInstance();
+            calendar.setTime(date);
             int currentHour=calendar.get(Calendar.HOUR_OF_DAY);
             if(currentHour>11&&currentHour<22) { // gets hour in 24h format)
                 int reminderTime=getPracticeReminderTime();
@@ -74,8 +74,8 @@ public class PracticeNotificationService extends Service {
 
     private int getSecondsPracticed() {
         Date date = new Date();
-        Calendar calendar = GregorianCalendar.getInstance(); // creates a new calendar instance
-        calendar.setTime(date);   // assigns calendar to given date
+        Calendar calendar = GregorianCalendar.getInstance();
+        calendar.setTime(date);
         int currentDay=calendar.get(Calendar.DAY_OF_YEAR);
         int lastPractice=archivo.getInt("practiceDay",currentDay);
         if(currentDay!=lastPractice){
@@ -125,7 +125,7 @@ public class PracticeNotificationService extends Service {
 
     private Notification createNotification() {
         Intent intent = new Intent(this, MainActivity.class);
-        intent.putExtra("SELECTED_TAB", 2); // add extra data to the intent
+        intent.putExtra("SELECTED_TAB", 2);
         intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP); // add flags to clear the activity stack
         PendingIntent pendingIntent;
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {

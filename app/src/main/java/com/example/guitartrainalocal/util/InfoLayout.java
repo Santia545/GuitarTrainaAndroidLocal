@@ -24,7 +24,6 @@ public class InfoLayout {
         tvInfo.setTextSize(20.0f);
         tvInfo.setGravity(Gravity.CENTER);
         tvInfo.setPaddingRelative(0, 0, 0, (int) (19 * dpi));
-        //create a button
         Button btnPermiss = new Button(activity);
         btnPermiss.setText(R.string.dar_permiso);
         btnPermiss.setOnClickListener((View view) -> {

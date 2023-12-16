@@ -96,7 +96,7 @@ public class MetronomeFragment extends Fragment {
                 if (text.equals("")) {
                     DialogInfo.dialogInfoBuilder(requireContext(), "", getString(R.string.metronome_empty_bpm_error));
                     etBPM.getEditText().setText(R.string.defalut_bpm);
-                    return true; // Consume the event
+                    return true;
                 }
                 int bpm = Integer.parseInt(text);
                 metronome.setBpm(bpm);

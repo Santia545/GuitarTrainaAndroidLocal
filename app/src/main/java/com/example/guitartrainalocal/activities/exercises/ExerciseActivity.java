@@ -17,22 +17,16 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.text.InputFilter;
 import android.text.InputType;
-import android.util.Log;
 import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
 
-import com.android.volley.VolleyError;
 import com.example.guitartrainalocal.R;
-import com.example.guitartrainalocal.api.IResult;
-import com.example.guitartrainalocal.api.VolleyService;
 import com.example.guitartrainalocal.ui.views.GuitarTabView;
 import com.example.guitartrainalocal.util.Countdown;
 import com.example.guitartrainalocal.util.DialogInfo;
 
-import java.nio.charset.StandardCharsets;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
@@ -57,11 +51,7 @@ public class ExerciseActivity extends AppCompatActivity {
     private final int SAMPLE_RATE = 44100;
     private AudioDispatcher dispatcher = null;
     private final int RECORD_BUFFER_SIZE = AudioRecord.getMinBufferSize(SAMPLE_RATE, CHANNEL_IN_MONO, ENCODING_PCM_16BIT);
-    private IResult resultCallback = null;
-    private VolleyService volleyService;
     private SharedPreferences archivo;
-    private Double averageScore;
-    private int module;
     private long starTime;
 
 
@@ -69,9 +59,7 @@ public class ExerciseActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_exercise);
-        initVolleyCallback();
         archivo = getEncryptedSharedPreferences(this);
-        volleyService = new VolleyService(resultCallback, this);
         ViewGroup rootView = findViewById(android.R.id.content);
         countdown = new Countdown(this, rootView);
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
@@ -86,25 +74,7 @@ public class ExerciseActivity extends AppCompatActivity {
         if (exerciseType == null) {
             exerciseType = "sweep";
         }
-        switch (exerciseType) {
-            case "spider":
-                module = 2;
-                break;
-            case "sweep":
-                module = 3;
-                break;
-            case "arpeggios":
-                module = 4;
-                break;
-            case "bends":
-                finish();
-                break;
-            case "scales":
-                module = 6;
-                break;
-            default:
-                break;
-        }
+
         btnPause.setOnClickListener(view -> {
             Button btn = ((Button) view);
             if (!pause) {
@@ -210,11 +180,7 @@ public class ExerciseActivity extends AppCompatActivity {
 
     private AlertDialog finalDialogBuilder(int rights, int wrongs) {
         double score = (double) rights / (rights + wrongs);
-        saveProgress(score);
         String message = getString(R.string.puntuacion) + String.format(Locale.getDefault(), "%.2f", score * 100) + getString(R.string.aciertos) + rights + getString(R.string.fallos) + wrongs;
-        if (averageScore != null) {
-            message += "\n" + getString(R.string.historic_average_score) + String.format(Locale.getDefault(), " %.2f", averageScore);
-        }
         AlertDialog dialog = new AlertDialog.Builder(ExerciseActivity.this).setTitle(R.string.sesion_finalizada).setMessage(message).setPositiveButton(R.string.next, (dialog1, which) -> {
             sequencesGenerator.increaseLevel(exerciseType);
             Intent nextLevel = new Intent(ExerciseActivity.this, ExerciseActivity.class);
@@ -223,11 +189,10 @@ public class ExerciseActivity extends AppCompatActivity {
             startActivity(nextLevel);
             finishAfterTransition();
         }).setNegativeButton(R.string.salir, (dialog1, which) -> dialog1.cancel()).setNeutralButton(R.string.repetir, (dialogInterface, i) -> recreate()).setOnCancelListener(dialogInterface -> finish()).create();
-        String finalMessage = message;
         dialog.setOnShowListener(dialogInterface -> {
             Button positiveButton = dialog.getButton(DialogInterface.BUTTON_POSITIVE);
             if (score <= 0.70) {
-                dialog.setMessage(finalMessage + "\n" + getString(R.string.low_score_info));
+                dialog.setMessage(message + "\n" + getString(R.string.low_score_info));
                 positiveButton.setEnabled(false);
             }
         });
@@ -272,8 +237,8 @@ public class ExerciseActivity extends AppCompatActivity {
 
     private void saveSecondsPracticed() {
         Date date = new Date();
-        Calendar calendar = GregorianCalendar.getInstance(); // creates a new calendar instance
-        calendar.setTime(date);   // assigns calendar to given date
+        Calendar calendar = GregorianCalendar.getInstance();
+        calendar.setTime(date);
         int secondsPracticedToday = archivo.getInt("secondsPracticed",0);
         secondsPracticedToday+=(System.currentTimeMillis()-starTime)/1000;
         int currentDay = calendar.get(Calendar.DAY_OF_YEAR);
@@ -283,46 +248,4 @@ public class ExerciseActivity extends AppCompatActivity {
             editor.apply();
     }
 
-    private void saveProgress(double score) {
-        String url = "/Scores?module=" + module + "&score=" + score*100 + "&difficulty=" + bpm + "&email=" + getCurrentUser();
-        volleyService.postStringDataVolley(url);
-    }
-
-    private String getCurrentUser() {
-        return archivo.getString("email", "");
-    }
-
-    void initVolleyCallback() {
-        resultCallback = new IResult() {
-            @Override
-            public void notifySuccess(String requestType, Object response) {
-                Log.d("notifySuccess", "Volley requester " + requestType);
-                Log.d("notifySuccess", "Volley JSON post" + response);
-            }
-
-            @Override
-            public void notifyError(String requestType, VolleyError error) {
-                error.printStackTrace();
-                String body = "";
-                String errorCode = "";
-                try {
-                    errorCode = "" + error.networkResponse.statusCode;
-                    body = new String(error.networkResponse.data, StandardCharsets.UTF_8);
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-                String cause = "";
-                if (error.getCause() != null) {
-                    cause = error.getCause().getMessage();
-                }
-                Toast.makeText(ExerciseActivity.this, getString(R.string.fallido) + cause + " " + body + " ", Toast.LENGTH_LONG).show();
-                Log.d("notifyError", "Volley requester " + requestType);
-                Log.d("notifyError", "Volley JSON post" + "That didn't work!" + error + " " + errorCode);
-                Log.d("notifyError", "Error: " + error + "\nStatus Code " + errorCode + "\nResponse Data " + body + "\nCause " + error.getCause() + "\nmessage " + error.getMessage());
-                if (requestType.equals("GET")) {
-                    averageScore = null;
-                }
-            }
-        };
-    }
 }

@@ -10,9 +10,6 @@ import com.example.guitartrainalocal.databinding.ActivityYoutubePlayerBinding;
 public class YoutubePlayerActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
-        //to use:
-
         super.onCreate(savedInstanceState);
         ActivityYoutubePlayerBinding binding = ActivityYoutubePlayerBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());

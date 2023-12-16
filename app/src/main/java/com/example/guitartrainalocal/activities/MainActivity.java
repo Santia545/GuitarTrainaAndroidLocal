@@ -30,18 +30,12 @@ public class MainActivity extends AppCompatActivity {
         com.example.guitartrainalocal.databinding.ActivityMainBinding binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         navView= findViewById(R.id.nav_view);
-        // Passing each menu ID as a set of Ids because each
-        // menu should be considered as top level destinations.
         AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
                 R.id.navigation_afinador, R.id.navigation_dashboard, R.id.navigation_configuration)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_activity_main);
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(binding.navView, navController);
-
-
-
-        // retrieve the selected tab from the intent's extras (default to the first tab)
 
         if (arePracticeNotificationsEnabled() && isServiceNotRunning(PracticeNotificationService.class)) {
             Intent intent = new Intent(this, PracticeNotificationService.class);

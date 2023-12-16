@@ -17,11 +17,11 @@ import java.util.List;
 
 public class GuitarTabView extends View {
     public static final String[][] guitarNotes = {{"E", "F", "F#", "G", "G#", "A", "A#", "B", "C", "C#", "D", "D#", "E", "F", "F#"}, {"B", "C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B", "C", "C#"}, {"G", "G#", "A", "A#", "B", "C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A"}, {"D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B", "C", "C#", "D", "D#", "E"}, {"A", "A#", "B", "C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"}, {"E", "F", "F#", "G", "G#", "A", "A#", "B", "C", "C#", "D", "D#", "E", "F", "F#"}};
-    private static final int NUM_STRINGS = 6; // Number of strings
+    private static final int NUM_STRINGS = 6;
     private static final float CALIBRATION = 60f;
-    private static int STRING_PADDING; // Space between strings
-    private static final int NOTE_SPEED = 6; // Speed at which notes fall (pixels per frame)
-    private static int NOTE_WIDTH = 100; // Width of each note
+    private static int STRING_PADDING;
+    private static final int NOTE_SPEED = 6; //pixels per frame
+    private static int NOTE_WIDTH = 100;
     private Paint paintText;
     private Paint stringPaint;
     private Paint cursorOutlinePaint;
@@ -62,14 +62,10 @@ public class GuitarTabView extends View {
     }
 
     private void init() {
-        // Get the current theme of the activity
         Resources.Theme currentTheme = getContext().getTheme();
-        // Create a new TypedValue object to hold the color value
         TypedValue typedValue = new TypedValue();
 
-        // Retrieve the color value of the text color attribute from the current theme
         currentTheme.resolveAttribute(android.R.attr.colorBackground, typedValue, true);
-        // Get the color value as an integer
         int backgroundColor = typedValue.data;
 
         stringPaint = new Paint();

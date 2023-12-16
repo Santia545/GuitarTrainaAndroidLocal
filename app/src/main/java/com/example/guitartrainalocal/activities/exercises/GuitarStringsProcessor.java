@@ -48,7 +48,7 @@ public class GuitarStringsProcessor implements AudioProcessor {
         float[] audioBuffer = audioEvent.getFloatBuffer();
         PitchDetectionResult result = detector.getPitch(audioBuffer);
         if(result.getProbability() > 0.85f && (System.currentTimeMillis()-timePluck)<200L) {
-            //the algorithm can detect the pitch with a 90% accuracy
+            //the algorithm can detect the pitch with a 85% accuracy
             Note note= processPitch(result.getPitch());
             if(Math.abs(note.getCentsOff())<20.){
                 onGuitarStringPluckedListener.listen(note.getName());
@@ -77,7 +77,6 @@ public class GuitarStringsProcessor implements AudioProcessor {
         double A4 = 440.0;
         double C0 = A4 * 0.03716272234383503;
         //Math.pow(2.0, -4.75) = 0.03716272234383503
-        //Notation of pitches
         String[] name = {"C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"};
         //get how many steps pitch is above C0
         double r = 12.0 * Math.log(pitchInHz / C0) / 0.6931471805599453;

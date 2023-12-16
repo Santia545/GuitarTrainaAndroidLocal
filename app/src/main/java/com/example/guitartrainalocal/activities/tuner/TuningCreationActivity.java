@@ -66,15 +66,15 @@ public class TuningCreationActivity extends AppCompatActivity {
                 if (text.equals("")) {
                     DialogInfo.dialogInfoBuilder(this, "", getString(R.string.empty_note_error)).show();
                     referenceNote.setText(R.string.la4_freq);
-                    return true; // Consume the event
+                    return true;
                 }
                 double frequence = Double.parseDouble(text);
                 if (frequence > 500. || frequence < 400.) {
                     DialogInfo.dialogInfoBuilder(this, "", getString(R.string.invalid_note_error)).show();
                     referenceNote.setText(R.string.la4_freq);
-                    return true; // Consume the event
+                    return true;
                 }
-                return true; // Consume the event
+                return true;
             }
             return false;
         });
