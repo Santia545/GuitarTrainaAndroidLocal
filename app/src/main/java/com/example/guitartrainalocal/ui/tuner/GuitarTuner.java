@@ -50,10 +50,10 @@ public class GuitarTuner {
             int stringIndex;
             if (guitarTunerView.getTuningMode() == 0) {
                 stringIndex = getClosestString(pitchInHz);
-                guitarTunerView.setTuningString(stringIndex, getCentsOff(pitchInHz, stringArray[stringIndex]));
+                activity.runOnUiThread(()->guitarTunerView.setTuningString(stringIndex, getCentsOff(pitchInHz, stringArray[stringIndex])));
             } else if (guitarTunerView.getTuningMode() == 1) {
                 stringIndex = guitarTunerView.getSelectedString();
-                guitarTunerView.setTuningString(stringIndex, getCentsOff(pitchInHz, stringArray[stringIndex]));
+                activity.runOnUiThread(()->guitarTunerView.setTuningString(stringIndex, getCentsOff(pitchInHz, stringArray[stringIndex])));
             }
 
         };
