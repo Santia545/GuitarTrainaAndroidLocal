@@ -112,7 +112,7 @@ public class ExerciseActivity extends AppCompatActivity {
         int threshold = getSensibilityFromPreferences(ExerciseActivity.this);
         AudioProcessor gainProcessor = new GainProcessor(gain);
         dispatcher = AudioDispatcherFactory.fromDefaultMicrophone(44100, RECORD_BUFFER_SIZE, 0);
-        IOnGuitarStringPluckedListener onStringPlucked = (String note) -> guitarTabView.onListenEvent(note.replaceAll("\\d+", ""));
+        IOnGuitarStringPluckedListener onStringPlucked = (String note) -> runOnUiThread(()->guitarTabView.onListenEvent(note.replaceAll("\\d+", "")));
         GuitarStringsProcessor guitarStringsProcessor = new GuitarStringsProcessor(onStringPlucked);
         guitarStringsProcessor.setThreshold(threshold);
         dispatcher.addAudioProcessor(gainProcessor);

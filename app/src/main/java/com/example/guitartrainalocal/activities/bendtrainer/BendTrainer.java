@@ -77,9 +77,9 @@ public class BendTrainer {
                 int closestIndex = findClosest(frequencies, pitchInHz);
                 String note = notes[closestIndex % 12];
                 initialFrequency = frequencies[closestIndex];
-                frequencyView.setBaseNote(note);
+                activity.runOnUiThread(()->frequencyView.setBaseNote(note));
             }
-            frequencyView.setCents(getCentsOff(pitchInHz, initialFrequency) - bendHeight);
+            activity.runOnUiThread(()->frequencyView.setCents(getCentsOff(pitchInHz, initialFrequency) - bendHeight));
             Log.d("Pitch", pitchInHz + "probability: " + result.getProbability() + " loudness: " + e.getdBSPL());
 
             isSoundDetected = true;
