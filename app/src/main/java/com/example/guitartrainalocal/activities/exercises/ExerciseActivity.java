@@ -185,7 +185,7 @@ public class ExerciseActivity extends AppCompatActivity {
             sequencesGenerator.increaseLevel(exerciseType);
             Intent nextLevel = new Intent(ExerciseActivity.this, ExerciseActivity.class);
             nextLevel.putExtra("exercise", exerciseType);
-            nextLevel.putExtra("exercise", bpm);
+            nextLevel.putExtra("bpm", bpm);
             startActivity(nextLevel);
             finishAfterTransition();
         }).setNegativeButton(R.string.salir, (dialog1, which) -> dialog1.cancel()).setNeutralButton(R.string.repetir, (dialogInterface, i) -> recreate()).setOnCancelListener(dialogInterface -> finish()).create();
