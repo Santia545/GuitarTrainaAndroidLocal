@@ -36,6 +36,11 @@
             android:title="@string/afinacion_por_defecto"
             app:useSimpleSummaryProvider="true"
             />
+        <SwitchPreferenceCompat
+            app:key="screen_on"
+            app:title="@string/enable_always_on_screen"
+            android:defaultValue="true"
+            />
     </PreferenceCategory>
     <PreferenceCategory
         app:key="microphone_category"

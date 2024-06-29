@@ -6,6 +6,10 @@ import android.content.SharedPreferences;
 import androidx.preference.PreferenceManager;
 
 public class Config {
+    public static boolean getAlwaysOnScreenFromPreferences(Context context) {
+        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
+        return sharedPreferences.getBoolean("screen_on", true);
+    }
     public static int getSensibilityFromPreferences(Context context) {
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
         int microphoneSensibility = sharedPreferences.getInt("tuner_sensibility", -100);

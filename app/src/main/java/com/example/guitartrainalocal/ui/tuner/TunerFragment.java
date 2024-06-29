@@ -1,5 +1,6 @@
 package com.example.guitartrainalocal.ui.tuner;
 
+import static com.example.guitartrainalocal.util.Config.getAlwaysOnScreenFromPreferences;
 import static com.example.guitartrainalocal.util.EncryptedSharedPreferences.getEncryptedSharedPreferences;
 import static com.example.guitartrainalocal.util.InfoLayout.createInfoLayout;
 
@@ -11,6 +12,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.LinearLayout;
 
@@ -59,6 +61,9 @@ public class TunerFragment extends Fragment {
             archivo=getEncryptedSharedPreferences(requireContext());
             guitarTuner = new GuitarTuner(requireActivity());
         }
+        if(getAlwaysOnScreenFromPreferences(requireContext())) {
+            requireActivity().getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+        }
     }
 
     public View onCreateView(@NonNull LayoutInflater inflater,
@@ -90,9 +95,11 @@ public class TunerFragment extends Fragment {
         }
         if (requireActivity().getIntent().hasExtra("tuning")) {
             Tuning tuning = (Tuning) requireActivity().getIntent().getSerializableExtra("tuning");
-            guitarTuner.setFrequencies(tuning.getFrequencies());
-            guitarTunerView.setNoteNames(tuning.getNoteNames());
-            guitarTunerView.setHz(tuning.getFrequencies());
+            if (tuning != null) {
+                guitarTuner.setFrequencies(tuning.getFrequencies());
+                guitarTunerView.setNoteNames(tuning.getNoteNames());
+                guitarTunerView.setHz(tuning.getFrequencies());
+            }
         }
         btnSwitchTunerMode.setOnClickListener(view -> {
             int index = guitarTunerView.getTuningMode();
