@@ -61,9 +61,6 @@ public class TunerFragment extends Fragment {
             archivo=getEncryptedSharedPreferences(requireContext());
             guitarTuner = new GuitarTuner(requireActivity());
         }
-        if(getAlwaysOnScreenFromPreferences(requireContext())) {
-            requireActivity().getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
-        }
     }
 
     public View onCreateView(@NonNull LayoutInflater inflater,
@@ -82,6 +79,9 @@ public class TunerFragment extends Fragment {
         guitarTunerView.setHz(defaultTuning.getFrequencies());
         if(guitarTuner!=null){
             guitarTuner.setFrequencies(defaultTuning.getFrequencies());
+        }
+        if(getAlwaysOnScreenFromPreferences(requireContext())) {
+            requireActivity().getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
         }
         return root;
     }
