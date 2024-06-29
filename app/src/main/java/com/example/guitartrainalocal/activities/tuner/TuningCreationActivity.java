@@ -63,7 +63,7 @@ public class TuningCreationActivity extends AppCompatActivity {
         referenceNote.setOnEditorActionListener((textView, i, keyEvent) -> {
             if (i == EditorInfo.IME_ACTION_DONE) {
                 String text = textView.getText().toString();
-                if (text.equals("")) {
+                if (text.isEmpty()) {
                     DialogInfo.dialogInfoBuilder(this, "", getString(R.string.empty_note_error)).show();
                     referenceNote.setText(R.string.la4_freq);
                     return true;
@@ -169,12 +169,12 @@ public class TuningCreationActivity extends AppCompatActivity {
         input.setHint("Titulo de la afinación");
         AlertDialog dialog = new AlertDialog.Builder(TuningCreationActivity.this)
                 .setTitle(getString(R.string.ingresa_el_titulo_de_la_afinaci_n))
-                .setMessage(getString(R.string.es_necesaria_una_conexion_a_internet_para_guardar_la_afinacion))
+                //.setMessage(getString(R.string.es_necesaria_una_conexion_a_internet_para_guardar_la_afinacion))
                 .setView(input)
 
                 .setPositiveButton(getString(R.string.guardar_afinacion), (dialogInterface, i) -> {
                     String title = input.getText().toString();
-                    if (title.equals("")) {
+                    if (title.isEmpty()) {
                         DialogInfo.dialogInfoBuilder(this, "", getString(R.string.el_titulo_no_puede_estar_vac_o)).show();
                         return;
                     }

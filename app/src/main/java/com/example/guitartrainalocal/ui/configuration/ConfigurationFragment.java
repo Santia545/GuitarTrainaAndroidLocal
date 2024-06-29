@@ -24,6 +24,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatDelegate;
 import androidx.core.app.ActivityCompat;
 import androidx.preference.DropDownPreference;
 import androidx.preference.EditTextPreference;
@@ -59,6 +60,7 @@ public class ConfigurationFragment extends PreferenceFragmentCompat {
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
+
         setPreferencesFromResource(R.xml.config, rootKey);
         archivo = getEncryptedSharedPreferences(requireContext());
         SwitchPreferenceCompat practiceNotifications = findPreference("practice_notifications");
@@ -166,6 +168,17 @@ public class ConfigurationFragment extends PreferenceFragmentCompat {
                     Toast.makeText(getContext(), ex.getMessage(), Toast.LENGTH_LONG).show();
                     return false;
                 }
+            });
+        }
+        SwitchPreferenceCompat darkMode = findPreference("dark_mode");
+        if (darkMode != null) {
+            darkMode.setOnPreferenceChangeListener((preference, newValue) -> {
+                if ((Boolean) newValue) {
+                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+                } else {
+                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+                }
+                return true;
             });
         }
     }
@@ -306,6 +319,6 @@ public class ConfigurationFragment extends PreferenceFragmentCompat {
 
     private View createVolumeLayout() {
         LayoutInflater inflater = LayoutInflater.from(requireContext());
-        return inflater.inflate(R.layout.volume_layout, null);
+        return inflater.inflate(R.layout.volume_layout, new LinearLayout(requireContext()));
     }
 }

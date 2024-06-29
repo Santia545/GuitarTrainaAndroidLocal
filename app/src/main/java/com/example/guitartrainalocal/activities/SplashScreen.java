@@ -1,6 +1,9 @@
 package com.example.guitartrainalocal.activities;
 
+import static com.example.guitartrainalocal.util.Config.getDarkModeFromPreferences;
+
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -17,6 +20,9 @@ public class SplashScreen extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash_screen);
+        if(getDarkModeFromPreferences(SplashScreen.this)) {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+        }
     }
 
     @Override
@@ -26,7 +32,7 @@ public class SplashScreen extends AppCompatActivity {
         runnable = () -> {
             Intent mainActivity = new Intent(SplashScreen.this, MainActivity.class);
             startActivity(mainActivity);
-            finish();
+            finishAfterTransition();
         };
         handler.postDelayed(runnable, 500);
     }

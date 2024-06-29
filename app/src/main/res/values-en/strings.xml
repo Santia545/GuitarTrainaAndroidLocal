@@ -385,5 +385,7 @@
     <string name="invalid_token_or_email">Invalid token or email</string>
     <string name="outdated_token">Oudated Token</string>
     <string name="enable_always_on_screen">Keep screen always on while tuning</string>
+    <string name="appearance">Appearance</string>
+    <string name="enable_dark_mode">Dark mode</string>
 
 </resources>

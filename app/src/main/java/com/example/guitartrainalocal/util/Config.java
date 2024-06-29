@@ -6,6 +6,11 @@ import android.content.SharedPreferences;
 import androidx.preference.PreferenceManager;
 
 public class Config {
+    public static boolean getDarkModeFromPreferences(Context context) {
+        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
+        return sharedPreferences.getBoolean("dark_mode", true);
+    }
+
     public static boolean getAlwaysOnScreenFromPreferences(Context context) {
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
         return sharedPreferences.getBoolean("screen_on", true);

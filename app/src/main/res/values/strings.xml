@@ -426,4 +426,6 @@
     <string name="invalid_token_or_email">Email o token invalido</string>
     <string name="outdated_token">Token Caducado</string>
     <string name="enable_always_on_screen">Mantener pantalla encendida durante la afinacion</string>
+    <string name="appearance">Apariencia</string>
+    <string name="enable_dark_mode">Modo oscuro</string>
 </resources>

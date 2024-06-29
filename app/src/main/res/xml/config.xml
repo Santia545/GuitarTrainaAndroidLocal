@@ -69,5 +69,13 @@
             app:summary="@string/espa_ol_ingles"
             />
     </PreferenceCategory>
-
+    <PreferenceCategory
+        app:key="app_appearance"
+        app:title="@string/appearance">
+        <SwitchPreferenceCompat
+            app:key="dark_mode"
+            app:title="@string/enable_dark_mode"
+            android:defaultValue="true"
+            />
+    </PreferenceCategory>
 </PreferenceScreen>
