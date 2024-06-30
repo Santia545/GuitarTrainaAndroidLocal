@@ -136,6 +136,7 @@ public class TunerFragment extends Fragment {
     public void onDestroyView() {
         super.onDestroyView();
         binding = null;
+        requireActivity().getWindow().clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
     }
     private Tuning getDefaultTuningFromSharedPreferences() {
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(requireContext());
