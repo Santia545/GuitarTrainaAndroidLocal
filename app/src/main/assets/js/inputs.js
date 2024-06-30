@@ -1,3 +1,11 @@
+document.addEventListener('DOMContentLoaded', function () {
+    const body = document.body;
+    const params = new URLSearchParams(window.location.search);
+    const data = params.get('theme');
+    if (data == "dark") {
+        body.classList.add('dark-theme');
+    }
+});
 
 const inputStart = document.getElementById('start');
 const inputStop = document.getElementById('stop');

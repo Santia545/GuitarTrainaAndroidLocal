@@ -1,5 +1,7 @@
 package com.example.guitartrainalocal.activities;
 
+import static com.example.guitartrainalocal.util.Config.getDarkModeFromPreferences;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
@@ -30,8 +32,13 @@ public class LooperActivity extends AppCompatActivity {
 
         WebSettings webSettings = webView.getSettings();
         webSettings.setJavaScriptEnabled(true);
-        webView.loadUrl("file:///android_asset/index.html");
+        String theme = "light";
+        if (getDarkModeFromPreferences(LooperActivity.this)) {
+            theme = "dark";
+        }
+        webView.loadUrl("file:///android_asset/index.html?theme=" + theme);
     }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.toolbar_menu, menu);
